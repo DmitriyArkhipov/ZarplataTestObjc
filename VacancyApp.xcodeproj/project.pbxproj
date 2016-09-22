@@ -13,9 +13,20 @@
 		8141EB801D93AF2F0033D774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8141EB7E1D93AF2F0033D774 /* Main.storyboard */; };
 		8141EB821D93AF2F0033D774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8141EB811D93AF2F0033D774 /* Assets.xcassets */; };
 		8141EB851D93AF2F0033D774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8141EB831D93AF2F0033D774 /* LaunchScreen.storyboard */; };
+		8141EB921D93B4B40033D774 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EB911D93B4B40033D774 /* Constants.m */; };
+		8141EB951D93B8790033D774 /* Vacancy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EB941D93B8790033D774 /* Vacancy.m */; };
+		8141EB981D93BAF00033D774 /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EB971D93BAF00033D774 /* Currency.m */; };
+		8141EB9B1D93BD6C0033D774 /* WorkingType.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EB9A1D93BD6C0033D774 /* WorkingType.m */; };
+		8141EB9E1D93BE4F0033D774 /* ExperienceLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EB9D1D93BE4F0033D774 /* ExperienceLength.m */; };
+		8141EBA41D93C14E0033D774 /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EBA31D93C14E0033D774 /* Company.m */; };
+		8141EBA71D93C2F80033D774 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EBA61D93C2F80033D774 /* Contact.m */; };
+		8141EBAB1D93E9C80033D774 /* RestConfigSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EBAA1D93E9C80033D774 /* RestConfigSetter.m */; };
+		ACC4B609AC2E5DAB93CB2C79 /* libPods-VacancyApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8572F0EDFADE169CD1387CC /* libPods-VacancyApp.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7159FF1667B8A0AAC2192FB1 /* Pods-VacancyApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VacancyApp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VacancyApp/Pods-VacancyApp.debug.xcconfig"; sourceTree = "<group>"; };
+		748AF588FD26ADC41373969B /* Pods-VacancyApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VacancyApp.release.xcconfig"; path = "Pods/Target Support Files/Pods-VacancyApp/Pods-VacancyApp.release.xcconfig"; sourceTree = "<group>"; };
 		8141EB721D93AF2F0033D774 /* VacancyApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VacancyApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8141EB761D93AF2F0033D774 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8141EB781D93AF2F0033D774 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -26,6 +37,23 @@
 		8141EB811D93AF2F0033D774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8141EB841D93AF2F0033D774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8141EB861D93AF2F0033D774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8141EB901D93B4B40033D774 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		8141EB911D93B4B40033D774 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		8141EB931D93B8790033D774 /* Vacancy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vacancy.h; sourceTree = "<group>"; };
+		8141EB941D93B8790033D774 /* Vacancy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vacancy.m; sourceTree = "<group>"; };
+		8141EB961D93BAF00033D774 /* Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Currency.h; sourceTree = "<group>"; };
+		8141EB971D93BAF00033D774 /* Currency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Currency.m; sourceTree = "<group>"; };
+		8141EB991D93BD6C0033D774 /* WorkingType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkingType.h; sourceTree = "<group>"; };
+		8141EB9A1D93BD6C0033D774 /* WorkingType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkingType.m; sourceTree = "<group>"; };
+		8141EB9C1D93BE4F0033D774 /* ExperienceLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExperienceLength.h; sourceTree = "<group>"; };
+		8141EB9D1D93BE4F0033D774 /* ExperienceLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExperienceLength.m; sourceTree = "<group>"; };
+		8141EBA21D93C14E0033D774 /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
+		8141EBA31D93C14E0033D774 /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
+		8141EBA51D93C2F80033D774 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
+		8141EBA61D93C2F80033D774 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
+		8141EBA91D93E9C80033D774 /* RestConfigSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestConfigSetter.h; sourceTree = "<group>"; };
+		8141EBAA1D93E9C80033D774 /* RestConfigSetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestConfigSetter.m; sourceTree = "<group>"; };
+		B8572F0EDFADE169CD1387CC /* libPods-VacancyApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VacancyApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +61,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACC4B609AC2E5DAB93CB2C79 /* libPods-VacancyApp.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		43DB18C87513E4F953265D12 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7159FF1667B8A0AAC2192FB1 /* Pods-VacancyApp.debug.xcconfig */,
+				748AF588FD26ADC41373969B /* Pods-VacancyApp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8141EB691D93AF2F0033D774 = {
 			isa = PBXGroup;
 			children = (
 				8141EB741D93AF2F0033D774 /* VacancyApp */,
 				8141EB731D93AF2F0033D774 /* Products */,
+				43DB18C87513E4F953265D12 /* Pods */,
+				A5C1B447E7966CDFC76E9E98 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,10 +98,12 @@
 		8141EB741D93AF2F0033D774 /* VacancyApp */ = {
 			isa = PBXGroup;
 			children = (
+				8141EB8F1D93AF720033D774 /* API */,
+				8141EB8E1D93AF6B0033D774 /* Controller */,
+				8141EB8D1D93AF640033D774 /* View */,
+				8141EB8C1D93AF5E0033D774 /* Model */,
 				8141EB781D93AF2F0033D774 /* AppDelegate.h */,
 				8141EB791D93AF2F0033D774 /* AppDelegate.m */,
-				8141EB7B1D93AF2F0033D774 /* ViewController.h */,
-				8141EB7C1D93AF2F0033D774 /* ViewController.m */,
 				8141EB7E1D93AF2F0033D774 /* Main.storyboard */,
 				8141EB811D93AF2F0033D774 /* Assets.xcassets */,
 				8141EB831D93AF2F0033D774 /* LaunchScreen.storyboard */,
@@ -79,6 +121,68 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		8141EB8C1D93AF5E0033D774 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8141EBA81D93C6A60033D774 /* Base API Model */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		8141EB8D1D93AF640033D774 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		8141EB8E1D93AF6B0033D774 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8141EB7B1D93AF2F0033D774 /* ViewController.h */,
+				8141EB7C1D93AF2F0033D774 /* ViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		8141EB8F1D93AF720033D774 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8141EB901D93B4B40033D774 /* Constants.h */,
+				8141EB911D93B4B40033D774 /* Constants.m */,
+				8141EBA91D93E9C80033D774 /* RestConfigSetter.h */,
+				8141EBAA1D93E9C80033D774 /* RestConfigSetter.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		8141EBA81D93C6A60033D774 /* Base API Model */ = {
+			isa = PBXGroup;
+			children = (
+				8141EB931D93B8790033D774 /* Vacancy.h */,
+				8141EB941D93B8790033D774 /* Vacancy.m */,
+				8141EB961D93BAF00033D774 /* Currency.h */,
+				8141EB971D93BAF00033D774 /* Currency.m */,
+				8141EB991D93BD6C0033D774 /* WorkingType.h */,
+				8141EB9A1D93BD6C0033D774 /* WorkingType.m */,
+				8141EB9C1D93BE4F0033D774 /* ExperienceLength.h */,
+				8141EB9D1D93BE4F0033D774 /* ExperienceLength.m */,
+				8141EBA21D93C14E0033D774 /* Company.h */,
+				8141EBA31D93C14E0033D774 /* Company.m */,
+				8141EBA51D93C2F80033D774 /* Contact.h */,
+				8141EBA61D93C2F80033D774 /* Contact.m */,
+			);
+			name = "Base API Model";
+			sourceTree = "<group>";
+		};
+		A5C1B447E7966CDFC76E9E98 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B8572F0EDFADE169CD1387CC /* libPods-VacancyApp.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -86,9 +190,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8141EB891D93AF2F0033D774 /* Build configuration list for PBXNativeTarget "VacancyApp" */;
 			buildPhases = (
+				1F0486410F98EA84DABD166C /* [CP] Check Pods Manifest.lock */,
 				8141EB6E1D93AF2F0033D774 /* Sources */,
 				8141EB6F1D93AF2F0033D774 /* Frameworks */,
 				8141EB701D93AF2F0033D774 /* Resources */,
+				BFF01A4812E7683CF530D28B /* [CP] Embed Pods Frameworks */,
+				3A1BD7F4BE54611671CD051D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -144,14 +251,70 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1F0486410F98EA84DABD166C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3A1BD7F4BE54611671CD051D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VacancyApp/Pods-VacancyApp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BFF01A4812E7683CF530D28B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VacancyApp/Pods-VacancyApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8141EB6E1D93AF2F0033D774 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				8141EB7D1D93AF2F0033D774 /* ViewController.m in Sources */,
+				8141EBAB1D93E9C80033D774 /* RestConfigSetter.m in Sources */,
+				8141EB951D93B8790033D774 /* Vacancy.m in Sources */,
+				8141EBA71D93C2F80033D774 /* Contact.m in Sources */,
+				8141EB981D93BAF00033D774 /* Currency.m in Sources */,
 				8141EB7A1D93AF2F0033D774 /* AppDelegate.m in Sources */,
 				8141EB771D93AF2F0033D774 /* main.m in Sources */,
+				8141EB9B1D93BD6C0033D774 /* WorkingType.m in Sources */,
+				8141EB921D93B4B40033D774 /* Constants.m in Sources */,
+				8141EBA41D93C14E0033D774 /* Company.m in Sources */,
+				8141EB9E1D93BE4F0033D774 /* ExperienceLength.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,8 +426,19 @@
 		};
 		8141EB8A1D93AF2F0033D774 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7159FF1667B8A0AAC2192FB1 /* Pods-VacancyApp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/ISO8601DateFormatterValueTransformer\"",
+					"\"${PODS_ROOT}/Headers/Public/RKValueTransformers\"",
+					"\"${PODS_ROOT}/Headers/Public/RestKit\"",
+					"\"${PODS_ROOT}/Headers/Public/SOCKit\"",
+					"\"${PODS_ROOT}/Headers/Public/TransitionKit\"",
+				);
 				INFOPLIST_FILE = VacancyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dmitriyarkhipov.VacancyApp;
@@ -274,8 +448,19 @@
 		};
 		8141EB8B1D93AF2F0033D774 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 748AF588FD26ADC41373969B /* Pods-VacancyApp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"/**",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/ISO8601DateFormatterValueTransformer\"",
+					"\"${PODS_ROOT}/Headers/Public/RKValueTransformers\"",
+					"\"${PODS_ROOT}/Headers/Public/RestKit\"",
+					"\"${PODS_ROOT}/Headers/Public/SOCKit\"",
+					"\"${PODS_ROOT}/Headers/Public/TransitionKit\"",
+				);
 				INFOPLIST_FILE = VacancyApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.dmitriyarkhipov.VacancyApp;
@@ -302,6 +487,7 @@
 				8141EB8B1D93AF2F0033D774 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

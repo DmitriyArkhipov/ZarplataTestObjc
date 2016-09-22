@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 
+#import "RestConfigSetter.h"
+
 @interface AppDelegate ()
 
 @end
@@ -17,6 +19,18 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    
+    
+    RestConfigSetter *restConfigurator = [[RestConfigSetter alloc] init];
+    
+    
+    [restConfigurator setConfigRestKit];
+    [restConfigurator loadAPIData];
+    
+    
+    
     return YES;
 }
 

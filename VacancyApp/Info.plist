@@ -43,5 +43,15 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>Exception Domains</key>
+		<dict>
+			<key>api.zp.ru</key>
+			<string></string>
+		</dict>
+	</dict>
 </dict>
 </plist>
