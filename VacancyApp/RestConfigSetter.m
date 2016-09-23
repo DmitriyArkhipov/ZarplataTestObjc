@@ -38,79 +38,69 @@
                                                   @"id":@"ID",
                                                   @"add_date":@"addDate",
                                                   @"header":@"header",
-                                                  @"salary":@"salary"
-                                                  
-//                                                  ,
-//                                                  @"currency":@"currency",
-//                                                  @"experience_length":@"experienceLength",
-//                                                  @"working_type":@"workingType",
-//                                                  @"company":@"company",
-//                                                  @"contact":@"contact",
-//                                                  @"description":@"vacancyDescription"
-                                                  
-                                                  
-                                                  
+                                                  @"salary":@"salary",
+                                                  @"description":@"vacancyDescription"
                                                   }];
     
     
     //define objects mapping in vacancy
-//    RKObjectMapping *currency = [RKObjectMapping mappingForClass:[Currency class]];
-//    
-//    [currency addAttributeMappingsFromDictionary:@{
-//                                                   @"id":@"ID",
-//                                                   @"title":@"title",
-//                                                   @"alias":@"alias"
-//                                                   }];
-//    
-//    
-//    
-//    RKObjectMapping *experienceLength = [RKObjectMapping mappingForClass:[ExperienceLength class]];
-//    
-//    [experienceLength addAttributeMappingsFromDictionary:@{
-//                                                           @"id":@"ID",
-//                                                           @"title":@"title"
-//                                                           }];
-//    
-//    
-//    RKObjectMapping *workingType = [RKObjectMapping mappingForClass:[WorkingType class]];
-//    
-//    [workingType addAttributeMappingsFromDictionary:@{
-//                                                      @"id":@"ID",
-//                                                      @"title":@"title"
-//                                                      }];
-//    
-//    
-//    RKObjectMapping *company = [RKObjectMapping mappingForClass:[Company class]];
-//    
-//    [company addAttributeMappingsFromDictionary:@{
-//                                                  @"id":@"ID",
-//                                                  @"title":@"title"
-//                                                  }];
-//    
-//    
-//    RKObjectMapping *contact = [RKObjectMapping mappingForClass:[Contact class]];
-//    
-//    [contact addAttributeMappingsFromDictionary:@{
-//                                                  @"id":@"ID",
-//                                                  @"address":@"address"
-//                                                  }];
+    RKObjectMapping *currency = [RKObjectMapping mappingForClass:[Currency class]];
+
+    [currency addAttributeMappingsFromDictionary:@{
+                                                   @"id":@"ID",
+                                                   @"title":@"title",
+                                                   @"alias":@"alias"
+                                                   }];
+
+    
+    
+    RKObjectMapping *experienceLength = [RKObjectMapping mappingForClass:[ExperienceLength class]];
+    
+    [experienceLength addAttributeMappingsFromDictionary:@{
+                                                           @"id":@"ID",
+                                                           @"title":@"title"
+                                                           }];
+    
+    
+    RKObjectMapping *workingType = [RKObjectMapping mappingForClass:[WorkingType class]];
+    
+    [workingType addAttributeMappingsFromDictionary:@{
+                                                      @"id":@"ID",
+                                                      @"title":@"title"
+                                                      }];
+    
+    
+    RKObjectMapping *company = [RKObjectMapping mappingForClass:[Company class]];
+    
+    [company addAttributeMappingsFromDictionary:@{
+                                                  @"id":@"ID",
+                                                  @"title":@"title"
+                                                  }];
+    
+    
+    RKObjectMapping *contact = [RKObjectMapping mappingForClass:[Contact class]];
+    
+    [contact addAttributeMappingsFromDictionary:@{
+                                                  @"id":@"ID",
+                                                  @"address":@"address"
+                                                  }];
     
     
     // define relationship mapping
     
+    // relationshipMappingFromKeyPath: @"JSON" toKeyPath:@"ObjectName"
+    RKRelationshipMapping *currencyRM = [RKRelationshipMapping relationshipMappingFromKeyPath:@"currency" toKeyPath:@"Currency" withMapping:currency];
+    RKRelationshipMapping *experienceLengthRM = [RKRelationshipMapping relationshipMappingFromKeyPath:@"experience_length" toKeyPath:@"ExperienceLength" withMapping:experienceLength];
+    RKRelationshipMapping *workingTypeRM = [RKRelationshipMapping relationshipMappingFromKeyPath:@"working_type" toKeyPath:@"WorkingType" withMapping:workingType];
+    RKRelationshipMapping *companyRM = [RKRelationshipMapping relationshipMappingFromKeyPath:@"company" toKeyPath:@"Company" withMapping:company];
+    RKRelationshipMapping *contactRM = [RKRelationshipMapping relationshipMappingFromKeyPath:@"contact" toKeyPath:@"Contact" withMapping:contact];
+
     
-//    RKRelationshipMapping *currencyRM = [RKRelationshipMapping relationshipMappingFromKeyPath:@"currency" toKeyPath:@"currency" withMapping:currency];
-//    RKRelationshipMapping *experienceLengthRM = [RKRelationshipMapping relationshipMappingFromKeyPath:@"experience_length" toKeyPath:@"experience_length" withMapping:experienceLength];
-//    RKRelationshipMapping *workingTypeRM = [RKRelationshipMapping relationshipMappingFromKeyPath:@"working_type" toKeyPath:@"working_type" withMapping:workingType];
-//    RKRelationshipMapping *companyRM = [RKRelationshipMapping relationshipMappingFromKeyPath:@"company" toKeyPath:@"company" withMapping:company];
-//    RKRelationshipMapping *contactRM = [RKRelationshipMapping relationshipMappingFromKeyPath:@"contact" toKeyPath:@"contact" withMapping:contact];
-//    
-//    
-//    [vacancy addPropertyMapping:currencyRM];
-//    [vacancy addPropertyMapping:experienceLengthRM];
-//    [vacancy addPropertyMapping:workingTypeRM];
-//    [vacancy addPropertyMapping:companyRM];
-//    [vacancy addPropertyMapping:contactRM];
+    [vacancy addPropertyMapping:currencyRM];
+    [vacancy addPropertyMapping:experienceLengthRM];
+    [vacancy addPropertyMapping:workingTypeRM];
+    [vacancy addPropertyMapping:companyRM];
+    [vacancy addPropertyMapping:contactRM];
     
     
     // register mappings with the provider using a response descriptor
@@ -129,9 +119,6 @@
     
     RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
     
-    NSLog(@"****************************loadAPIData call");
-    
-    
     NSDictionary *queryParams = @{
                                   @"offset" : @(25), //Начальный сдвиг возвращаемых результато
                                   @"limit" : @(100)
@@ -141,16 +128,10 @@
     
     [[RKObjectManager sharedManager] getObjectsAtPath:API_PATH_PATTERN parameters:queryParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         
-        NSLog(@"============================== loadAPIData array data load");
-        
-//        dispatch_async(dispatch_get_main_queue(), ^{
-//        
         _vacancyArray = mappingResult.array;
-//
-//        });
         
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        NSLog(@"What do you mean by 'there is no zarplata?': %@", error);
+        NSLog(@"What do you mean by 'there is no zarplata?': %@", error.description);
     }];
 
 
