@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-extern NSString *const API_BASEPOINT;
+extern NSString *const API_URL;
 
 extern NSString *const API_PATH_PATTERN;
 

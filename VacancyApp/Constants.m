@@ -8,7 +8,7 @@
 
 #import "Constants.h"
 
-NSString *const API_BASEPOINT = @"http://api.zp.ru";
+NSString *const API_URL = @"http://api.zp.ru";
 
 NSString *const API_PATH_PATTERN = @"/v1/vacancies";
 

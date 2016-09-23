@@ -22,7 +22,7 @@
 - (void) setConfigRestKit {
     
     // initialize AFNetworking HTTPClient
-    NSURL *baseURL = [NSURL URLWithString:API_BASEPOINT];
+    NSURL *baseURL = [NSURL URLWithString:API_URL];
     AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
     
     
@@ -104,7 +104,11 @@
     
     
     // register mappings with the provider using a response descriptor
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:vacancy method:RKRequestMethodGET pathPattern:API_PATH_PATTERN keyPath:@"vacancies" statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:vacancy
+                                                                                            method:RKRequestMethodGET
+                                                                                       pathPattern:API_PATH_PATTERN
+                                                                                           keyPath:@"vacancies"
+                                                                                       statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
     
     
     

@@ -21,6 +21,20 @@
 		8141EBA41D93C14E0033D774 /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EBA31D93C14E0033D774 /* Company.m */; };
 		8141EBA71D93C2F80033D774 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EBA61D93C2F80033D774 /* Contact.m */; };
 		8141EBAB1D93E9C80033D774 /* RestConfigSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EBAA1D93E9C80033D774 /* RestConfigSetter.m */; };
+		81C9C3411D952E4900A95BE5 /* VacancyAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C33F1D952E4900A95BE5 /* VacancyAppModel.xcdatamodeld */; };
+		81C9C3471D9580C100A95BE5 /* RestKitFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3461D9580C100A95BE5 /* RestKitFacade.m */; };
+		81C9C3841D95996E00A95BE5 /* CDMVacancy+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C36D1D95996D00A95BE5 /* CDMVacancy+CoreDataProperties.m */; };
+		81C9C3851D95996E00A95BE5 /* CDMVacancy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C36F1D95996D00A95BE5 /* CDMVacancy.m */; };
+		81C9C3861D95996E00A95BE5 /* CDMExperienceLength+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3711D95996D00A95BE5 /* CDMExperienceLength+CoreDataProperties.m */; };
+		81C9C3871D95996E00A95BE5 /* CDMExperienceLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3731D95996E00A95BE5 /* CDMExperienceLength.m */; };
+		81C9C3881D95996E00A95BE5 /* CDMCompany+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3751D95996E00A95BE5 /* CDMCompany+CoreDataProperties.m */; };
+		81C9C3891D95996E00A95BE5 /* CDMCompany.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3771D95996E00A95BE5 /* CDMCompany.m */; };
+		81C9C38A1D95996E00A95BE5 /* CDMContact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3791D95996E00A95BE5 /* CDMContact+CoreDataProperties.m */; };
+		81C9C38B1D95996E00A95BE5 /* CDMContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C37B1D95996E00A95BE5 /* CDMContact.m */; };
+		81C9C38C1D95996E00A95BE5 /* CDMCurrency+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C37D1D95996E00A95BE5 /* CDMCurrency+CoreDataProperties.m */; };
+		81C9C38D1D95996E00A95BE5 /* CDMCurrency.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C37F1D95996E00A95BE5 /* CDMCurrency.m */; };
+		81C9C38E1D95996E00A95BE5 /* CDMWorkingType+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3811D95996E00A95BE5 /* CDMWorkingType+CoreDataProperties.m */; };
+		81C9C38F1D95996E00A95BE5 /* CDMWorkingType.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3831D95996E00A95BE5 /* CDMWorkingType.m */; };
 		ACC4B609AC2E5DAB93CB2C79 /* libPods-VacancyApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8572F0EDFADE169CD1387CC /* libPods-VacancyApp.a */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +67,33 @@
 		8141EBA61D93C2F80033D774 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
 		8141EBA91D93E9C80033D774 /* RestConfigSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestConfigSetter.h; sourceTree = "<group>"; };
 		8141EBAA1D93E9C80033D774 /* RestConfigSetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestConfigSetter.m; sourceTree = "<group>"; };
+		81C9C3401D952E4900A95BE5 /* VacancyAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VacancyAppModel.xcdatamodel; sourceTree = "<group>"; };
+		81C9C3451D9580C100A95BE5 /* RestKitFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestKitFacade.h; sourceTree = "<group>"; };
+		81C9C3461D9580C100A95BE5 /* RestKitFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestKitFacade.m; sourceTree = "<group>"; };
+		81C9C36C1D95996D00A95BE5 /* CDMVacancy+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CDMVacancy+CoreDataProperties.h"; path = "CoreData Model/CDMVacancy+CoreDataProperties.h"; sourceTree = "<group>"; };
+		81C9C36D1D95996D00A95BE5 /* CDMVacancy+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CDMVacancy+CoreDataProperties.m"; path = "CoreData Model/CDMVacancy+CoreDataProperties.m"; sourceTree = "<group>"; };
+		81C9C36E1D95996D00A95BE5 /* CDMVacancy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDMVacancy.h; path = "CoreData Model/CDMVacancy.h"; sourceTree = "<group>"; };
+		81C9C36F1D95996D00A95BE5 /* CDMVacancy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDMVacancy.m; path = "CoreData Model/CDMVacancy.m"; sourceTree = "<group>"; };
+		81C9C3701D95996D00A95BE5 /* CDMExperienceLength+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CDMExperienceLength+CoreDataProperties.h"; path = "CoreData Model/CDMExperienceLength+CoreDataProperties.h"; sourceTree = "<group>"; };
+		81C9C3711D95996D00A95BE5 /* CDMExperienceLength+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CDMExperienceLength+CoreDataProperties.m"; path = "CoreData Model/CDMExperienceLength+CoreDataProperties.m"; sourceTree = "<group>"; };
+		81C9C3721D95996E00A95BE5 /* CDMExperienceLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDMExperienceLength.h; path = "CoreData Model/CDMExperienceLength.h"; sourceTree = "<group>"; };
+		81C9C3731D95996E00A95BE5 /* CDMExperienceLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDMExperienceLength.m; path = "CoreData Model/CDMExperienceLength.m"; sourceTree = "<group>"; };
+		81C9C3741D95996E00A95BE5 /* CDMCompany+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CDMCompany+CoreDataProperties.h"; path = "CoreData Model/CDMCompany+CoreDataProperties.h"; sourceTree = "<group>"; };
+		81C9C3751D95996E00A95BE5 /* CDMCompany+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CDMCompany+CoreDataProperties.m"; path = "CoreData Model/CDMCompany+CoreDataProperties.m"; sourceTree = "<group>"; };
+		81C9C3761D95996E00A95BE5 /* CDMCompany.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDMCompany.h; path = "CoreData Model/CDMCompany.h"; sourceTree = "<group>"; };
+		81C9C3771D95996E00A95BE5 /* CDMCompany.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDMCompany.m; path = "CoreData Model/CDMCompany.m"; sourceTree = "<group>"; };
+		81C9C3781D95996E00A95BE5 /* CDMContact+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CDMContact+CoreDataProperties.h"; path = "CoreData Model/CDMContact+CoreDataProperties.h"; sourceTree = "<group>"; };
+		81C9C3791D95996E00A95BE5 /* CDMContact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CDMContact+CoreDataProperties.m"; path = "CoreData Model/CDMContact+CoreDataProperties.m"; sourceTree = "<group>"; };
+		81C9C37A1D95996E00A95BE5 /* CDMContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDMContact.h; path = "CoreData Model/CDMContact.h"; sourceTree = "<group>"; };
+		81C9C37B1D95996E00A95BE5 /* CDMContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDMContact.m; path = "CoreData Model/CDMContact.m"; sourceTree = "<group>"; };
+		81C9C37C1D95996E00A95BE5 /* CDMCurrency+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CDMCurrency+CoreDataProperties.h"; path = "CoreData Model/CDMCurrency+CoreDataProperties.h"; sourceTree = "<group>"; };
+		81C9C37D1D95996E00A95BE5 /* CDMCurrency+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CDMCurrency+CoreDataProperties.m"; path = "CoreData Model/CDMCurrency+CoreDataProperties.m"; sourceTree = "<group>"; };
+		81C9C37E1D95996E00A95BE5 /* CDMCurrency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDMCurrency.h; path = "CoreData Model/CDMCurrency.h"; sourceTree = "<group>"; };
+		81C9C37F1D95996E00A95BE5 /* CDMCurrency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDMCurrency.m; path = "CoreData Model/CDMCurrency.m"; sourceTree = "<group>"; };
+		81C9C3801D95996E00A95BE5 /* CDMWorkingType+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CDMWorkingType+CoreDataProperties.h"; path = "CoreData Model/CDMWorkingType+CoreDataProperties.h"; sourceTree = "<group>"; };
+		81C9C3811D95996E00A95BE5 /* CDMWorkingType+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CDMWorkingType+CoreDataProperties.m"; path = "CoreData Model/CDMWorkingType+CoreDataProperties.m"; sourceTree = "<group>"; };
+		81C9C3821D95996E00A95BE5 /* CDMWorkingType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDMWorkingType.h; path = "CoreData Model/CDMWorkingType.h"; sourceTree = "<group>"; };
+		81C9C3831D95996E00A95BE5 /* CDMWorkingType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDMWorkingType.m; path = "CoreData Model/CDMWorkingType.m"; sourceTree = "<group>"; };
 		B8572F0EDFADE169CD1387CC /* libPods-VacancyApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VacancyApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +150,7 @@
 				8141EB831D93AF2F0033D774 /* LaunchScreen.storyboard */,
 				8141EB861D93AF2F0033D774 /* Info.plist */,
 				8141EB751D93AF2F0033D774 /* Supporting Files */,
+				81C9C33F1D952E4900A95BE5 /* VacancyAppModel.xcdatamodeld */,
 			);
 			path = VacancyApp;
 			sourceTree = "<group>";
@@ -124,6 +166,7 @@
 		8141EB8C1D93AF5E0033D774 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				81C9C3901D95998000A95BE5 /* CoreDataModel */,
 				8141EBA81D93C6A60033D774 /* Base API Model */,
 			);
 			name = Model;
@@ -152,6 +195,8 @@
 				8141EB911D93B4B40033D774 /* Constants.m */,
 				8141EBA91D93E9C80033D774 /* RestConfigSetter.h */,
 				8141EBAA1D93E9C80033D774 /* RestConfigSetter.m */,
+				81C9C3451D9580C100A95BE5 /* RestKitFacade.h */,
+				81C9C3461D9580C100A95BE5 /* RestKitFacade.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -173,6 +218,38 @@
 				8141EBA61D93C2F80033D774 /* Contact.m */,
 			);
 			name = "Base API Model";
+			sourceTree = "<group>";
+		};
+		81C9C3901D95998000A95BE5 /* CoreDataModel */ = {
+			isa = PBXGroup;
+			children = (
+				81C9C36C1D95996D00A95BE5 /* CDMVacancy+CoreDataProperties.h */,
+				81C9C36D1D95996D00A95BE5 /* CDMVacancy+CoreDataProperties.m */,
+				81C9C36E1D95996D00A95BE5 /* CDMVacancy.h */,
+				81C9C36F1D95996D00A95BE5 /* CDMVacancy.m */,
+				81C9C3701D95996D00A95BE5 /* CDMExperienceLength+CoreDataProperties.h */,
+				81C9C3711D95996D00A95BE5 /* CDMExperienceLength+CoreDataProperties.m */,
+				81C9C3721D95996E00A95BE5 /* CDMExperienceLength.h */,
+				81C9C3731D95996E00A95BE5 /* CDMExperienceLength.m */,
+				81C9C3741D95996E00A95BE5 /* CDMCompany+CoreDataProperties.h */,
+				81C9C3751D95996E00A95BE5 /* CDMCompany+CoreDataProperties.m */,
+				81C9C3761D95996E00A95BE5 /* CDMCompany.h */,
+				81C9C3771D95996E00A95BE5 /* CDMCompany.m */,
+				81C9C3781D95996E00A95BE5 /* CDMContact+CoreDataProperties.h */,
+				81C9C3791D95996E00A95BE5 /* CDMContact+CoreDataProperties.m */,
+				81C9C37A1D95996E00A95BE5 /* CDMContact.h */,
+				81C9C37B1D95996E00A95BE5 /* CDMContact.m */,
+				81C9C37C1D95996E00A95BE5 /* CDMCurrency+CoreDataProperties.h */,
+				81C9C37D1D95996E00A95BE5 /* CDMCurrency+CoreDataProperties.m */,
+				81C9C37E1D95996E00A95BE5 /* CDMCurrency.h */,
+				81C9C37F1D95996E00A95BE5 /* CDMCurrency.m */,
+				81C9C3801D95996E00A95BE5 /* CDMWorkingType+CoreDataProperties.h */,
+				81C9C3811D95996E00A95BE5 /* CDMWorkingType+CoreDataProperties.m */,
+				81C9C3821D95996E00A95BE5 /* CDMWorkingType.h */,
+				81C9C3831D95996E00A95BE5 /* CDMWorkingType.m */,
+			);
+			name = CoreDataModel;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		A5C1B447E7966CDFC76E9E98 /* Frameworks */ = {
@@ -304,17 +381,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81C9C3871D95996E00A95BE5 /* CDMExperienceLength.m in Sources */,
+				81C9C3851D95996E00A95BE5 /* CDMVacancy.m in Sources */,
 				8141EB7D1D93AF2F0033D774 /* ViewController.m in Sources */,
+				81C9C38B1D95996E00A95BE5 /* CDMContact.m in Sources */,
+				81C9C38C1D95996E00A95BE5 /* CDMCurrency+CoreDataProperties.m in Sources */,
+				81C9C38A1D95996E00A95BE5 /* CDMContact+CoreDataProperties.m in Sources */,
 				8141EBAB1D93E9C80033D774 /* RestConfigSetter.m in Sources */,
 				8141EB951D93B8790033D774 /* Vacancy.m in Sources */,
 				8141EBA71D93C2F80033D774 /* Contact.m in Sources */,
+				81C9C3891D95996E00A95BE5 /* CDMCompany.m in Sources */,
+				81C9C38F1D95996E00A95BE5 /* CDMWorkingType.m in Sources */,
 				8141EB981D93BAF00033D774 /* Currency.m in Sources */,
+				81C9C3881D95996E00A95BE5 /* CDMCompany+CoreDataProperties.m in Sources */,
 				8141EB7A1D93AF2F0033D774 /* AppDelegate.m in Sources */,
 				8141EB771D93AF2F0033D774 /* main.m in Sources */,
 				8141EB9B1D93BD6C0033D774 /* WorkingType.m in Sources */,
+				81C9C38E1D95996E00A95BE5 /* CDMWorkingType+CoreDataProperties.m in Sources */,
+				81C9C3861D95996E00A95BE5 /* CDMExperienceLength+CoreDataProperties.m in Sources */,
 				8141EB921D93B4B40033D774 /* Constants.m in Sources */,
+				81C9C3841D95996E00A95BE5 /* CDMVacancy+CoreDataProperties.m in Sources */,
 				8141EBA41D93C14E0033D774 /* Company.m in Sources */,
 				8141EB9E1D93BE4F0033D774 /* ExperienceLength.m in Sources */,
+				81C9C3471D9580C100A95BE5 /* RestKitFacade.m in Sources */,
+				81C9C3411D952E4900A95BE5 /* VacancyAppModel.xcdatamodeld in Sources */,
+				81C9C38D1D95996E00A95BE5 /* CDMCurrency.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,6 +581,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		81C9C33F1D952E4900A95BE5 /* VacancyAppModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				81C9C3401D952E4900A95BE5 /* VacancyAppModel.xcdatamodel */,
+			);
+			currentVersion = 81C9C3401D952E4900A95BE5 /* VacancyAppModel.xcdatamodel */;
+			path = VacancyAppModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 8141EB6A1D93AF2F0033D774 /* Project object */;
 }

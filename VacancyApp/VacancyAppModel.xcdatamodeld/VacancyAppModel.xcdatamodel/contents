@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15G1004" minimumToolsVersion="Xcode 7.0">
+    <entity name="CDMCompany" representedClassName="CDMCompany" syncable="YES">
+        <attribute name="comp_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="vacancy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDMVacancy" inverseName="company" inverseEntity="CDMVacancy" syncable="YES"/>
+    </entity>
+    <entity name="CDMContact" representedClassName="CDMContact" syncable="YES">
+        <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="cont_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="vacancy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDMVacancy" inverseName="contact" inverseEntity="CDMVacancy" syncable="YES"/>
+    </entity>
+    <entity name="CDMCurrency" representedClassName="CDMCurrency" syncable="YES">
+        <attribute name="alias" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="curr_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="vacancy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDMVacancy" inverseName="currency" inverseEntity="CDMVacancy" syncable="YES"/>
+    </entity>
+    <entity name="CDMExperienceLength" representedClassName="CDMExperienceLength" syncable="YES">
+        <attribute name="eL_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="vacancy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDMVacancy" inverseName="experienceLength" inverseEntity="CDMVacancy" syncable="YES"/>
+    </entity>
+    <entity name="CDMVacancy" representedClassName="CDMVacancy" syncable="YES">
+        <attribute name="addDate" optional="YES" attributeType="Date" syncable="YES"/>
+        <attribute name="header" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="innerID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="salary" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="v_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="vacancyDescription" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="company" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDMCompany" inverseName="vacancy" inverseEntity="CDMCompany" syncable="YES"/>
+        <relationship name="contact" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDMContact" inverseName="vacancy" inverseEntity="CDMContact" syncable="YES"/>
+        <relationship name="currency" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDMCurrency" inverseName="vacancy" inverseEntity="CDMCurrency" syncable="YES"/>
+        <relationship name="experienceLength" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDMExperienceLength" inverseName="vacancy" inverseEntity="CDMExperienceLength" syncable="YES"/>
+        <relationship name="workingType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDMWorkingType" inverseName="vacancy" inverseEntity="CDMWorkingType" syncable="YES"/>
+    </entity>
+    <entity name="CDMWorkingType" representedClassName="CDMWorkingType" syncable="YES">
+        <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="wT_ID" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="vacancy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDMVacancy" inverseName="workingType" inverseEntity="CDMVacancy" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="CDMVacancy" positionX="-63" positionY="-18" width="128" height="210"/>
+        <element name="CDMCurrency" positionX="-389" positionY="87" width="128" height="105"/>
+        <element name="CDMExperienceLength" positionX="306" positionY="-216" width="128" height="90"/>
+        <element name="CDMWorkingType" positionX="322" positionY="153" width="128" height="90"/>
+        <element name="CDMCompany" positionX="90" positionY="213" width="128" height="90"/>
+        <element name="CDMContact" positionX="376" positionY="-45" width="128" height="90"/>
+    </elements>
+</model>

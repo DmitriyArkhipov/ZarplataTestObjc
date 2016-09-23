@@ -10,6 +10,8 @@
 
 #import "RestConfigSetter.h"
 
+#import "RestKitFacade.h"
+
 @interface AppDelegate ()
 
 @end
@@ -23,11 +25,13 @@
     
     
     
-    RestConfigSetter *restConfigurator = [[RestConfigSetter alloc] init];
+//    RestConfigSetter *restConfigurator = [[RestConfigSetter alloc] init];
+//    
+//    
+//    [restConfigurator setConfigRestKit];
+//    [restConfigurator loadAPIData];
     
-    
-    [restConfigurator setConfigRestKit];
-    [restConfigurator loadAPIData];
+    [[RestKitFacade sharedInstance] requestAPIData];
     
     
     
