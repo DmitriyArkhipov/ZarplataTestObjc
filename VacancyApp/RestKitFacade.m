@@ -54,13 +54,42 @@
 }
 
 
+
+- (void) searchRequesWithString:(NSString *)searchItem {
+    
+    NSString *searchPath = [NSString stringWithFormat:@"%@%@%@", API_PATH_PATTERN, API_SEARCH_KEY,searchItem];
+
+    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+    
+    NSDictionary *queryParams = @{
+                                  @"offset" : @(25), //Начальный сдвиг возвращаемых результатов
+                                  @"limit" : @(25)
+                                  };
+    
+    [[RKObjectManager sharedManager] getObjectsAtPath:searchPath parameters:queryParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        
+        NSLog(@"================== requestAPIData getObjectsAtPath ==================");
+        NSError *error;
+        [[self managedObjectContext] saveToPersistentStore:&error];
+        
+        if (error) {
+            NSLog(@"requestAPIData error: %@",error.description);
+        }
+        
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        NSLog(@"What do you mean by 'there is no zarplata?': %@", error.description);
+    }];
+}
+
+
+
 - (void) requestAPIData {
 
     RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
     
     NSDictionary *queryParams = @{
-                                  @"offset" : @(25), //Начальный сдвиг возвращаемых результато
-                                  @"limit" : @(100)
+                                  @"offset" : @(25), //Начальный сдвиг возвращаемых результатов
+                                  @"limit" : @(25)
                                   };
     
     
@@ -68,17 +97,16 @@
     [[RKObjectManager sharedManager] getObjectsAtPath:API_PATH_PATTERN parameters:queryParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         
         NSLog(@"================== requestAPIData getObjectsAtPath ==================");
+        NSError *error;
+        [[self managedObjectContext] saveToPersistentStore:&error];
         
-        [[self managedObjectContext] saveToPersistentStore:nil];
-        
-        _tempObjectsArray = mappingResult.array;
-        
+        if (error) {
+            NSLog(@"requestAPIData error: %@",error.description);
+        }
         
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"What do you mean by 'there is no zarplata?': %@", error.description);
     }];
-
-
 
 }
 

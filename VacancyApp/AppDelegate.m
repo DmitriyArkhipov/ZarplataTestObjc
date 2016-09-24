@@ -25,8 +25,14 @@
 //    RestConfigSetter *restConfigurator = [[RestConfigSetter alloc] init];
 //    [restConfigurator setConfigRestKit];
 //    [restConfigurator loadAPIData];
+//    [restConfigurator searchRequesWithString:@"ios"];
     
-    [[RestKitFacade sharedInstance] requestAPIData];
+    
+//    [[RestKitFacade sharedInstance] requestAPIData];
+    
+    
+//    [[RestKitFacade sharedInstance] searchRequesWithString:@"ios"]; //test search
+    
     
     return YES;
 }

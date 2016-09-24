@@ -23,4 +23,6 @@
 
 - (void) requestAPIData;
 
+- (void) searchRequesWithString:(NSString *)searchItem;
+
 @end

@@ -136,10 +136,37 @@
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"What do you mean by 'there is no zarplata?': %@", error.description);
     }];
-
-
-
-
 }
+
+
+- (void) searchRequesWithString:(NSString *)searchItem {
+    
+    
+    
+    NSString *searchPath = [NSString stringWithFormat:@"%@%@%@", API_PATH_PATTERN, API_SEARCH_KEY,searchItem];
+    
+    
+    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+    
+    NSDictionary *queryParams = @{
+                                  @"offset" : @(25), //Начальный сдвиг возвращаемых результатов
+                                  @"limit" : @(25)
+                                  };
+    
+    
+    
+    [[RKObjectManager sharedManager] getObjectsAtPath:searchPath parameters:queryParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        
+        NSLog(@"================== requestAPIData getObjectsAtPath ==================");
+        
+        _vacancyArray = mappingResult.array;
+        
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        NSLog(@"What do you mean by 'there is no zarplata?': %@", error.description);
+    }];
+}
+
+
+
 
 @end
