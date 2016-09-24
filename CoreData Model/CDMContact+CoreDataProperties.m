@@ -13,7 +13,6 @@
 
 @implementation CDMContact (CoreDataProperties)
 
-@dynamic cont_ID;
 @dynamic address;
 @dynamic vacancy;
 

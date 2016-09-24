@@ -145,10 +145,9 @@
     
     RKEntityMapping *contact = [self addMappingForEntityForName:@"CDMContact"
                                 attributeMappingsFromDictionary:@{
-                                                                  @"id":@"cont_ID",
                                                                   @"address":@"address"
                                                                   }
-                                       identificationAttributes:@[@"cont_ID"]
+                                       identificationAttributes:@[@"address"]
      ];
     
     

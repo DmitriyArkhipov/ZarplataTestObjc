@@ -15,7 +15,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CDMContact (CoreDataProperties)
 
-@property (nullable, nonatomic, retain) NSString *cont_ID;
 @property (nullable, nonatomic, retain) NSString *address;
 @property (nullable, nonatomic, retain) NSSet<CDMVacancy *> *vacancy;
 

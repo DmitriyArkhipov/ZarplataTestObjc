@@ -7,7 +7,6 @@
     </entity>
     <entity name="CDMContact" representedClassName="CDMContact" syncable="YES">
         <attribute name="address" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="cont_ID" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="vacancy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDMVacancy" inverseName="contact" inverseEntity="CDMVacancy" syncable="YES"/>
     </entity>
     <entity name="CDMCurrency" representedClassName="CDMCurrency" syncable="YES">
@@ -45,6 +44,6 @@
         <element name="CDMExperienceLength" positionX="306" positionY="-216" width="128" height="90"/>
         <element name="CDMWorkingType" positionX="322" positionY="153" width="128" height="90"/>
         <element name="CDMCompany" positionX="90" positionY="213" width="128" height="90"/>
-        <element name="CDMContact" positionX="376" positionY="-45" width="128" height="90"/>
+        <element name="CDMContact" positionX="376" positionY="-45" width="128" height="75"/>
     </elements>
 </model>

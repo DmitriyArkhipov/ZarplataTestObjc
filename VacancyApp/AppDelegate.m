@@ -22,16 +22,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+//    RestConfigSetter *restConfigurator = [[RestConfigSetter alloc] init];
+//    [restConfigurator setConfigRestKit];
+//    [restConfigurator loadAPIData];
     
-    
-    
-    RestConfigSetter *restConfigurator = [[RestConfigSetter alloc] init];
-    [restConfigurator setConfigRestKit];
-    [restConfigurator loadAPIData];
-    
-//    [[RestKitFacade sharedInstance] requestAPIData];
-    
-    
+    [[RestKitFacade sharedInstance] requestAPIData];
     
     return YES;
 }
