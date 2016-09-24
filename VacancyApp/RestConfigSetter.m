@@ -167,6 +167,53 @@
 }
 
 
+- (void) searchRequestWithVacancyID:(NSString *)ID {
+    
+    NSString *searchPath = [NSString stringWithFormat:@"%@%@", API_PATH_PATTERN, ID];
+    
+    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+    
+    //
+    //    NSDictionary *queryParams = @{
+    //                                  @"offset" : @(25), //Начальный сдвиг возвращаемых результатов
+    //                                  @"limit" : @(25)
+    //                                  };
+    
+    [[RKObjectManager sharedManager] getObjectsAtPath:searchPath parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
+        
+                id resultObject = [mappingResult.array firstObject];
+        
+                //-------- test block
+        
+                Vacancy *vacancy = resultObject;
+        
+                NSString *v_ID = vacancy.ID;
+        
+                NSString *header = vacancy.header;
+        
+                Contact *contact = vacancy.contact;
+        
+                NSString *contactAddress = contact.address;
+        
+        
+                NSDate *addDate = vacancy.addDate;
+        
+                NSLog(@"ID %@",v_ID);
+                NSLog(@"Headers: %@", header);
+                NSLog(@"Headers address: %@", contactAddress);
+                NSLog(@"data: %@", addDate.description);
+        
+        
+    } failure:^(RKObjectRequestOperation *operation, NSError *error) {
+        NSLog(@"What do you mean by 'there is no zarplata?': %@", error.description);
+    }];
+    
+    
+    
+    
+    
+}
+
 
 
 @end

@@ -10,8 +10,10 @@
 #import <RestKit/CoreData.h>
 #import <RestKit/RestKit.h>
 
-
 #import "Constants.h"
+#import "CoreDataModel.h"
+
+#import "DefaultCoreDataStack.h"
 
 @interface RestKitFacade : NSObject
 
@@ -23,6 +25,10 @@
 
 - (void) requestAPIData;
 
-- (void) searchRequesWithString:(NSString *)searchItem;
+- (void) searchRequestWithString:(NSString *)searchItem;
+
+- (NSManagedObject *) getVacancyInLocalDBWithID:(NSString *)ID;
+
+- (void) searchRequestWithVacancyID:(NSString *)ID;
 
 @end

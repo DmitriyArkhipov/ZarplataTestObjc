@@ -35,6 +35,7 @@
 		81C9C3FC1D967CB000A95BE5 /* CDMVacancy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3EE1D967CB000A95BE5 /* CDMVacancy.m */; };
 		81C9C3FD1D967CB000A95BE5 /* CDMExperienceLength+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3F01D967CB000A95BE5 /* CDMExperienceLength+CoreDataProperties.m */; };
 		81C9C3FE1D967CB000A95BE5 /* CDMExperienceLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3F21D967CB000A95BE5 /* CDMExperienceLength.m */; };
+		81C9C4051D96D04E00A95BE5 /* DefaultCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C4041D96D04E00A95BE5 /* DefaultCoreDataStack.m */; };
 		ACC4B609AC2E5DAB93CB2C79 /* libPods-VacancyApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8572F0EDFADE169CD1387CC /* libPods-VacancyApp.a */; };
 /* End PBXBuildFile section */
 
@@ -94,6 +95,9 @@
 		81C9C3F01D967CB000A95BE5 /* CDMExperienceLength+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CDMExperienceLength+CoreDataProperties.m"; path = "CoreData Model/CDMExperienceLength+CoreDataProperties.m"; sourceTree = "<group>"; };
 		81C9C3F11D967CB000A95BE5 /* CDMExperienceLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDMExperienceLength.h; path = "CoreData Model/CDMExperienceLength.h"; sourceTree = "<group>"; };
 		81C9C3F21D967CB000A95BE5 /* CDMExperienceLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDMExperienceLength.m; path = "CoreData Model/CDMExperienceLength.m"; sourceTree = "<group>"; };
+		81C9C4021D96B83800A95BE5 /* CoreDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataModel.h; sourceTree = "<group>"; };
+		81C9C4031D96D04E00A95BE5 /* DefaultCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultCoreDataStack.h; sourceTree = "<group>"; };
+		81C9C4041D96D04E00A95BE5 /* DefaultCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultCoreDataStack.m; sourceTree = "<group>"; };
 		B8572F0EDFADE169CD1387CC /* libPods-VacancyApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VacancyApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -197,6 +201,8 @@
 				8141EBAA1D93E9C80033D774 /* RestConfigSetter.m */,
 				81C9C3451D9580C100A95BE5 /* RestKitFacade.h */,
 				81C9C3461D9580C100A95BE5 /* RestKitFacade.m */,
+				81C9C4031D96D04E00A95BE5 /* DefaultCoreDataStack.h */,
+				81C9C4041D96D04E00A95BE5 /* DefaultCoreDataStack.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -223,6 +229,7 @@
 		81C9C3FF1D967CBD00A95BE5 /* CoreData Model */ = {
 			isa = PBXGroup;
 			children = (
+				81C9C4021D96B83800A95BE5 /* CoreDataModel.h */,
 				81C9C3DB1D967CB000A95BE5 /* CDMCompany+CoreDataProperties.h */,
 				81C9C3DC1D967CB000A95BE5 /* CDMCompany+CoreDataProperties.m */,
 				81C9C3DD1D967CB000A95BE5 /* CDMCompany.h */,
@@ -382,6 +389,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				81C9C3FC1D967CB000A95BE5 /* CDMVacancy.m in Sources */,
+				81C9C4051D96D04E00A95BE5 /* DefaultCoreDataStack.m in Sources */,
 				8141EB7D1D93AF2F0033D774 /* ViewController.m in Sources */,
 				81C9C3F41D967CB000A95BE5 /* CDMCompany.m in Sources */,
 				8141EBAB1D93E9C80033D774 /* RestConfigSetter.m in Sources */,

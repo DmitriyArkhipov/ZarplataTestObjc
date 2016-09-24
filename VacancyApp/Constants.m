@@ -10,7 +10,7 @@
 
 NSString *const API_URL = @"http://api.zp.ru";
 
-NSString *const API_PATH_PATTERN = @"/v1/vacancies";
+NSString *const API_PATH_PATTERN = @"/v1/vacancies/";
 
 NSString *const API_SEARCH_KEY = @"?q=";
 

@@ -20,4 +20,6 @@
 
 - (void) searchRequesWithString:(NSString *)searchItem;
 
+- (void) searchRequestWithVacancyID:(NSString *)ID;
+
 @end
