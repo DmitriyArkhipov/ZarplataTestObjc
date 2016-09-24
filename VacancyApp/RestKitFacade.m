@@ -15,6 +15,8 @@
 
 @property (strong, nonatomic) RKManagedObjectStore *managedObjectStore;
 
+@property (strong, nonatomic) NSArray *tempObjectsArray;
+
 @end
 
 
@@ -68,6 +70,8 @@
         NSLog(@"================== requestAPIData getObjectsAtPath ==================");
         
         [[self managedObjectContext] saveToPersistentStore:nil];
+        
+        _tempObjectsArray = mappingResult.array;
         
         
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {

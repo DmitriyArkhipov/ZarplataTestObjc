@@ -25,13 +25,11 @@
     
     
     
-//    RestConfigSetter *restConfigurator = [[RestConfigSetter alloc] init];
-//    
-//    
-//    [restConfigurator setConfigRestKit];
-//    [restConfigurator loadAPIData];
+    RestConfigSetter *restConfigurator = [[RestConfigSetter alloc] init];
+    [restConfigurator setConfigRestKit];
+    [restConfigurator loadAPIData];
     
-    [[RestKitFacade sharedInstance] requestAPIData];
+//    [[RestKitFacade sharedInstance] requestAPIData];
     
     
     

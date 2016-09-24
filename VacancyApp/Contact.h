@@ -10,8 +10,6 @@
 
 @interface Contact : NSObject
 
-@property (strong, nonatomic) NSString *ID;
-
 @property (strong, nonatomic) NSString *address;
 
 @end

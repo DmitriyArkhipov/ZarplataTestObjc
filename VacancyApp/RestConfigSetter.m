@@ -81,7 +81,6 @@
     RKObjectMapping *contact = [RKObjectMapping mappingForClass:[Contact class]];
     
     [contact addAttributeMappingsFromDictionary:@{
-                                                  @"id":@"ID",
                                                   @"address":@"address"
                                                   }];
     
