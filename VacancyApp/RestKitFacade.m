@@ -51,9 +51,6 @@
     return _managedObjectStore.mainQueueManagedObjectContext;
 }
 
-
-
-
 #pragma mark - Default CoreData Search
 
 - (NSManagedObject *) getVacancyInLocalDBWithID:(NSString *)ID {
@@ -92,7 +89,6 @@
 
 #pragma mark - RestKit Requests
 
-
 - (void) searchRequestWithVacancyID:(NSString *)ID {
     
     RKResponseDescriptor *currentDescriptor = [self createResponseDescriptorWithID:ID];
@@ -124,6 +120,8 @@
         NSLog(@"Headers: %@", header);
         NSLog(@"Headers address: %@", contactAddress);
         NSLog(@"data: %@", addDate.description);
+        
+        //----------
         
         [_objectManager removeResponseDescriptor:currentDescriptor];
         
@@ -173,6 +171,8 @@
             
         }
         
+        //--------
+        
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"What do you mean by 'there is no zarplata?': %@", error.description);
     }];
@@ -195,11 +195,13 @@
     [[RKObjectManager sharedManager] getObjectsAtPath:API_PATH_PATTERN parameters:queryParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         
         NSLog(@"================== requestAPIData getObjectsAtPath ==================");
-        NSError *error;
-        [[self managedObjectContext] saveToPersistentStore:&error];
         
-        if (error) {
-            NSLog(@"requestAPIData error: %@",error.description);
+        NSArray *results = mappingResult.array;
+        
+        for (CDMVacancy *item in results) {
+                
+                NSLog(@"getObjectWithID id = %@", item.v_ID);
+                NSLog(@"getObjectWithID header = %@", item.header);
         }
         
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
@@ -209,112 +211,80 @@
 }
 
 
-#pragma mark - RestKit Mapping Entities
+#pragma mark - RestKit Config
 
+- (void) configure {
+    
+    // initialize AFNetworking HTTPClient
+    NSURL *baseURL = [NSURL URLWithString:API_URL];
+    AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
+    
+    _objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
 
-- (void) addMappingForEntities {
     
-    if (!_objectManager) {
-        return;
-    }
-
+    // Configure CoreData managed object model.
+    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"VacancyAppModel" withExtension:@"momd"];
     
-    //addAttributeMappingsFromDictionary: @{  @"JSON" : @"Object property", ...  }
+    NSManagedObjectModel *managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
     
+    // Initialize managed object store
+    _managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
+    _objectManager.managedObjectStore = _managedObjectStore;
     
-    RKEntityMapping *vacancy = [self addMappingForEntityForName:@"CDMVacancy"
-                                attributeMappingsFromDictionary:@{
-                                                                  @"id":@"v_ID",
-                                                                  @"add_date":@"addDate",
-                                                                  @"header":@"header",
-                                                                  @"salary":@"salary",
-                                                                  @"description":@"vacancyDescription"
-                                                                  }
-                                       identificationAttributes:@[@"v_ID"]
-     ];
+    [self prepareCoreDataStackWithManagedObjectModel:managedObjectModel];
     
-    
-    
-    RKEntityMapping *currency = [self addMappingForEntityForName:@"CDMCurrency"
-                                 attributeMappingsFromDictionary:@{
-                                                                   @"id":@"curr_ID",
-                                                                   @"title":@"title",
-                                                                   @"alias":@"alias"
-                                                                   }
-                                        identificationAttributes:@[@"curr_ID"]
-     ];
-    
-    
-    RKEntityMapping *experienceLength = [self addMappingForEntityForName:@"CDMExperienceLength"
-                                         attributeMappingsFromDictionary:@{
-                                                                           @"id":@"eL_ID",
-                                                                           @"title":@"title"
-                                                                           }
-                                                identificationAttributes:@[@"eL_ID"]
-     ];
-    
-    
-    
-    RKEntityMapping *workingType = [self addMappingForEntityForName:@"CDMWorkingType"
-                                    attributeMappingsFromDictionary:@{
-                                                                      @"id":@"wT_ID",
-                                                                      @"title":@"title"
-                                                                      }
-                                           identificationAttributes:@[@"wT_ID"]
-     ];
-    
-    
-    RKEntityMapping *company = [self addMappingForEntityForName:@"CDMCompany"
-                                attributeMappingsFromDictionary:@{
-                                                                  @"id":@"comp_ID",
-                                                                  @"title":@"title"
-                                                                  }
-                                       identificationAttributes:@[@"comp_ID"]
-     ];
-    
-    
-    RKEntityMapping *contact = [self addMappingForEntityForName:@"CDMContact"
-                                attributeMappingsFromDictionary:@{
-                                                                  @"address":@"address"
-                                                                  }
-                                       identificationAttributes:@[@"address"]
-     ];
-    
-    
-    // relationshipMappingFromKeyPath: @"JSON" toKeyPath:@"ObjectName"
-    RKRelationshipMapping *currencyRM = [RKRelationshipMapping relationshipMappingFromKeyPath:@"currency" toKeyPath:@"currency" withMapping:currency];
-    RKRelationshipMapping *experienceLengthRM = [RKRelationshipMapping relationshipMappingFromKeyPath:@"experience_length" toKeyPath:@"experienceLength" withMapping:experienceLength];
-    RKRelationshipMapping *workingTypeRM = [RKRelationshipMapping relationshipMappingFromKeyPath:@"working_type" toKeyPath:@"workingType" withMapping:workingType];
-    RKRelationshipMapping *companyRM = [RKRelationshipMapping relationshipMappingFromKeyPath:@"company" toKeyPath:@"company" withMapping:company];
-    RKRelationshipMapping *contactRM = [RKRelationshipMapping relationshipMappingFromKeyPath:@"contact" toKeyPath:@"contact" withMapping:contact];
-    
-    
-    [vacancy addPropertyMapping:currencyRM];
-    [vacancy addPropertyMapping:experienceLengthRM];
-    [vacancy addPropertyMapping:workingTypeRM];
-    [vacancy addPropertyMapping:companyRM];
-    [vacancy addPropertyMapping:contactRM];
-    
-    
-    // register mappings with the provider using a response descriptor
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:vacancy
-                                                                                            method:RKRequestMethodGET
-                                                                                       pathPattern:API_PATH_PATTERN
-                                                                                           keyPath:@"vacancies"
-                                                                                       statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
-    
-
-    [_objectManager addResponseDescriptor:responseDescriptor];
-
+    [self createDefaultResponseDescriptor];
 }
 
 
-- (RKResponseDescriptor *) createResponseDescriptorWithID:(NSString *)ID {
+- (RKEntityMapping *) addMappingForEntityForName:(NSString *)entityName
+                 attributeMappingsFromDictionary:(NSDictionary *)attributeMappings
+                        identificationAttributes:(NSArray *)ids
+{
+    if (!_managedObjectStore)
+        return nil;
     
+    // Create mapping for the particular entity.
+    RKEntityMapping *objectMapping = [RKEntityMapping mappingForEntityForName:entityName
+                                                         inManagedObjectStore:_managedObjectStore];
+    [objectMapping addAttributeMappingsFromDictionary:attributeMappings];
+    objectMapping.identificationAttributes = ids;
+    
+    return objectMapping;
+}
+
+
+
+- (void) prepareCoreDataStackWithManagedObjectModel:(NSManagedObjectModel *)managedObjectModel
+{
+    NSAssert(managedObjectModel, @"managedObjectModel can't be nil");
+    
+    // Initialize managed object store
+    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
+    _objectManager.managedObjectStore = managedObjectStore;
+    
+    
+    // Complete Core Data stack initialization
+    [managedObjectStore createPersistentStoreCoordinator];
+    NSString *storePath = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"VacancyAppDB.sqlite"];
+    NSError *error;
+    NSPersistentStore *persistentStore = [managedObjectStore addSQLitePersistentStoreAtPath:storePath fromSeedDatabaseAtPath:nil withConfiguration:nil options:nil error:&error];
+    NSAssert(persistentStore, @"Failed to add persistent store with error: %@", error);
+    
+    // Create the managed object contexts
+    [managedObjectStore createManagedObjectContexts];
+    
+    // Configure a managed object cache to ensure we do not create duplicate objects
+    managedObjectStore.managedObjectCache = [[RKInMemoryManagedObjectCache alloc] initWithManagedObjectContext:managedObjectStore.persistentStoreManagedObjectContext];
+    
+}
+
+
+- (RKEntityMapping *) mappingForEntities {
+
     if (!_objectManager) {
         return nil;
     }
-    
     
     //addAttributeMappingsFromDictionary: @{  @"JSON" : @"Object property", ...  }
     
@@ -392,11 +362,45 @@
     [vacancy addPropertyMapping:companyRM];
     [vacancy addPropertyMapping:contactRM];
     
+    return vacancy;
+}
+
+
+
+- (void) createDefaultResponseDescriptor {
+    
+    RKEntityMapping *modelMapping = [self mappingForEntities];
+    
+    if (!modelMapping) {
+        return;
+    }
+    
+    // register mappings with the provider using a response descriptor
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:modelMapping
+                                                                                            method:RKRequestMethodGET
+                                                                                       pathPattern:API_PATH_PATTERN
+                                                                                           keyPath:@"vacancies"
+                                                                                       statusCodes:RKStatusCodeIndexSetForClass(RKStatusCodeClassSuccessful)];
+    
+    
+    [_objectManager addResponseDescriptor:responseDescriptor];
+}
+
+
+
+- (RKResponseDescriptor *) createResponseDescriptorWithID:(NSString *)ID {
+    
+    
+    RKEntityMapping *modelMapping = [self mappingForEntities];
+    
+    if (!modelMapping) {
+        return nil;
+    }
     
     NSString *pathPattern = [NSString stringWithFormat:@"%@%@", API_PATH_PATTERN, ID];
     
     // register mappings with the provider using a response descriptor
-    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:vacancy
+    RKResponseDescriptor *responseDescriptor = [RKResponseDescriptor responseDescriptorWithMapping:modelMapping
                                                                                             method:RKRequestMethodGET
                                                                                        pathPattern:pathPattern
                                                                                            keyPath:@"vacancies"
@@ -411,76 +415,5 @@
 }
 
 
-
-- (void) configure {
-    
-    // initialize AFNetworking HTTPClient
-    NSURL *baseURL = [NSURL URLWithString:API_URL];
-    AFHTTPClient *client = [[AFHTTPClient alloc] initWithBaseURL:baseURL];
-    
-    _objectManager = [[RKObjectManager alloc] initWithHTTPClient:client];
-
-    
-    // Configure CoreData managed object model.
-    NSURL *modelURL = [[NSBundle mainBundle] URLForResource:@"VacancyAppModel" withExtension:@"momd"];
-    
-    NSManagedObjectModel *managedObjectModel = [[NSManagedObjectModel alloc] initWithContentsOfURL:modelURL];
-    
-    // Initialize managed object store
-    _managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
-    _objectManager.managedObjectStore = _managedObjectStore;
-    
-    [self configureWithManagedObjectModel:managedObjectModel];
-    
-    [self addMappingForEntities];
-}
-
-
-
-#pragma mark - RestKit Config
-
-
-
-- (RKEntityMapping *) addMappingForEntityForName:(NSString *)entityName
-                 attributeMappingsFromDictionary:(NSDictionary *)attributeMappings
-                        identificationAttributes:(NSArray *)ids
-{
-    if (!_managedObjectStore)
-        return nil;
-    
-    // Create mapping for the particular entity.
-    RKEntityMapping *objectMapping = [RKEntityMapping mappingForEntityForName:entityName
-                                                         inManagedObjectStore:_managedObjectStore];
-    [objectMapping addAttributeMappingsFromDictionary:attributeMappings];
-    objectMapping.identificationAttributes = ids;
-    
-    return objectMapping;
-}
-
-
-
-- (void)configureWithManagedObjectModel:(NSManagedObjectModel *)managedObjectModel
-{
-    NSAssert(managedObjectModel, @"managedObjectModel can't be nil");
-    
-    // Initialize managed object store
-    RKManagedObjectStore *managedObjectStore = [[RKManagedObjectStore alloc] initWithManagedObjectModel:managedObjectModel];
-    _objectManager.managedObjectStore = managedObjectStore;
-    
-    
-    // Complete Core Data stack initialization
-    [managedObjectStore createPersistentStoreCoordinator];
-    NSString *storePath = [RKApplicationDataDirectory() stringByAppendingPathComponent:@"VacancyAppDB.sqlite"];
-    NSError *error;
-    NSPersistentStore *persistentStore = [managedObjectStore addSQLitePersistentStoreAtPath:storePath fromSeedDatabaseAtPath:nil withConfiguration:nil options:nil error:&error];
-    NSAssert(persistentStore, @"Failed to add persistent store with error: %@", error);
-    
-    // Create the managed object contexts
-    [managedObjectStore createManagedObjectContexts];
-    
-    // Configure a managed object cache to ensure we do not create duplicate objects
-    managedObjectStore.managedObjectCache = [[RKInMemoryManagedObjectCache alloc] initWithManagedObjectContext:managedObjectStore.persistentStoreManagedObjectContext];
-    
-}
 
 @end

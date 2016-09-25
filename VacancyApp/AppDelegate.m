@@ -29,14 +29,14 @@
 //    [restConfigurator searchRequesWithString:@"ios"];
     
     
-//    [[RestKitFacade sharedInstance] requestAPIData];
+    [[RestKitFacade sharedInstance] requestAPIData];
     
     
 //    [[RestKitFacade sharedInstance] searchRequestWithString:@"ios"]; //test search
 //    [[RestKitFacade sharedInstance] getVacancyInLocalDBWithID:@"112097263"];
-//    
+//
 //    [[RestKitFacade sharedInstance] searchRequestWithVacancyID:@"112097263,60134432,84571973"];
-    [[RestKitFacade sharedInstance] searchRequestWithVacancyID:@"112097263"];
+//    [[RestKitFacade sharedInstance] searchRequestWithVacancyID:@"112097263"];
     
     return YES;
 }

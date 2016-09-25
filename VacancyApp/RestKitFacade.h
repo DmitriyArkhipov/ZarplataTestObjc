@@ -23,12 +23,24 @@
 
 - (NSManagedObjectContext *)managedObjectContext;
 
+/**
+ Получение данных от API с параметрами по умолчанию (offset = 25, limit = 25)
+ */
 - (void) requestAPIData;
+
 
 - (void) searchRequestWithString:(NSString *)searchItem;
 
+/**
+ Поиск объекта вакансии по ID в локальной базе данных
+ @param ID Идентификатор вакансии.
+ */
 - (NSManagedObject *) getVacancyInLocalDBWithID:(NSString *)ID;
 
+/**
+ Поиск объекта вакансии по ID запросив данные с API
+ @param ID Идентификатор вакансии. При перечислении идентификаторов через запятую будут выданы вакансии в соответствии с идентификаторами
+ */
 - (void) searchRequestWithVacancyID:(NSString *)ID;
 
 @end
