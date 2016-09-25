@@ -38,6 +38,7 @@
 		81EFF68A1D98161600D67AA7 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EFF6891D98161600D67AA7 /* SearchTableViewCell.m */; };
 		81EFF6951D981A4600D67AA7 /* CDMVacancy+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EFF6921D981A4600D67AA7 /* CDMVacancy+CoreDataProperties.m */; };
 		81EFF6961D981A4600D67AA7 /* CDMVacancy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EFF6941D981A4600D67AA7 /* CDMVacancy.m */; };
+		81EFF69C1D985C3B00D67AA7 /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EFF69B1D985C3B00D67AA7 /* ActivityTableViewCell.m */; };
 		ACC4B609AC2E5DAB93CB2C79 /* libPods-VacancyApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8572F0EDFADE169CD1387CC /* libPods-VacancyApp.a */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +105,9 @@
 		81EFF6921D981A4600D67AA7 /* CDMVacancy+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CDMVacancy+CoreDataProperties.m"; path = "CoreData Model/CDMVacancy+CoreDataProperties.m"; sourceTree = "<group>"; };
 		81EFF6931D981A4600D67AA7 /* CDMVacancy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDMVacancy.h; path = "CoreData Model/CDMVacancy.h"; sourceTree = "<group>"; };
 		81EFF6941D981A4600D67AA7 /* CDMVacancy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDMVacancy.m; path = "CoreData Model/CDMVacancy.m"; sourceTree = "<group>"; };
+		81EFF6991D98410F00D67AA7 /* TableViewUpdateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewUpdateDelegate.h; sourceTree = "<group>"; };
+		81EFF69A1D985C3B00D67AA7 /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
+		81EFF69B1D985C3B00D67AA7 /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
 		B8572F0EDFADE169CD1387CC /* libPods-VacancyApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VacancyApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -187,6 +191,8 @@
 			children = (
 				81EFF6881D98161600D67AA7 /* SearchTableViewCell.h */,
 				81EFF6891D98161600D67AA7 /* SearchTableViewCell.m */,
+				81EFF69A1D985C3B00D67AA7 /* ActivityTableViewCell.h */,
+				81EFF69B1D985C3B00D67AA7 /* ActivityTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -205,6 +211,7 @@
 		8141EB8F1D93AF720033D774 /* API */ = {
 			isa = PBXGroup;
 			children = (
+				81EFF6971D98400D00D67AA7 /* Delegates */,
 				8141EB901D93B4B40033D774 /* Constants.h */,
 				8141EB911D93B4B40033D774 /* Constants.m */,
 				8141EBA91D93E9C80033D774 /* RestConfigSetter.h */,
@@ -267,6 +274,14 @@
 			);
 			name = "CoreData Model";
 			path = ..;
+			sourceTree = "<group>";
+		};
+		81EFF6971D98400D00D67AA7 /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				81EFF6991D98410F00D67AA7 /* TableViewUpdateDelegate.h */,
+			);
+			name = Delegates;
 			sourceTree = "<group>";
 		};
 		A5C1B447E7966CDFC76E9E98 /* Frameworks */ = {
@@ -420,6 +435,7 @@
 				81C9C3F81D967CB000A95BE5 /* CDMWorkingType.m in Sources */,
 				81EFF6961D981A4600D67AA7 /* CDMVacancy.m in Sources */,
 				8141EBA41D93C14E0033D774 /* Company.m in Sources */,
+				81EFF69C1D985C3B00D67AA7 /* ActivityTableViewCell.m in Sources */,
 				81C9C3F71D967CB000A95BE5 /* CDMWorkingType+CoreDataProperties.m in Sources */,
 				8141EB9E1D93BE4F0033D774 /* ExperienceLength.m in Sources */,
 				81C9C3FD1D967CB000A95BE5 /* CDMExperienceLength+CoreDataProperties.m in Sources */,
