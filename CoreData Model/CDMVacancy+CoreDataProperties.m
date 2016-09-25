@@ -2,7 +2,7 @@
 //  CDMVacancy+CoreDataProperties.m
 //  VacancyApp
 //
-//  Created by Dmitriy Arkhipov on 24.09.16.
+//  Created by Dmitriy Arkhipov on 25.09.16.
 //  Copyright © 2016 Dmitriy Arkhipov. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu
@@ -13,16 +13,16 @@
 
 @implementation CDMVacancy (CoreDataProperties)
 
-@dynamic v_ID;
 @dynamic addDate;
 @dynamic header;
-@dynamic salary;
-@dynamic vacancyDescription;
 @dynamic innerID;
+@dynamic salary;
+@dynamic v_ID;
+@dynamic vacancyDescription;
+@dynamic company;
+@dynamic contact;
 @dynamic currency;
 @dynamic experienceLength;
 @dynamic workingType;
-@dynamic company;
-@dynamic contact;
 
 @end

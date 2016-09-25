@@ -31,11 +31,13 @@
 		81C9C3F81D967CB000A95BE5 /* CDMWorkingType.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3E61D967CB000A95BE5 /* CDMWorkingType.m */; };
 		81C9C3F91D967CB000A95BE5 /* CDMContact+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3E81D967CB000A95BE5 /* CDMContact+CoreDataProperties.m */; };
 		81C9C3FA1D967CB000A95BE5 /* CDMContact.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3EA1D967CB000A95BE5 /* CDMContact.m */; };
-		81C9C3FB1D967CB000A95BE5 /* CDMVacancy+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3EC1D967CB000A95BE5 /* CDMVacancy+CoreDataProperties.m */; };
-		81C9C3FC1D967CB000A95BE5 /* CDMVacancy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3EE1D967CB000A95BE5 /* CDMVacancy.m */; };
 		81C9C3FD1D967CB000A95BE5 /* CDMExperienceLength+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3F01D967CB000A95BE5 /* CDMExperienceLength+CoreDataProperties.m */; };
 		81C9C3FE1D967CB000A95BE5 /* CDMExperienceLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3F21D967CB000A95BE5 /* CDMExperienceLength.m */; };
 		81C9C4051D96D04E00A95BE5 /* DefaultCoreDataStack.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C4041D96D04E00A95BE5 /* DefaultCoreDataStack.m */; };
+		81EFF6871D98115C00D67AA7 /* SearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EFF6861D98115C00D67AA7 /* SearchTableViewController.m */; };
+		81EFF68A1D98161600D67AA7 /* SearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EFF6891D98161600D67AA7 /* SearchTableViewCell.m */; };
+		81EFF6951D981A4600D67AA7 /* CDMVacancy+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EFF6921D981A4600D67AA7 /* CDMVacancy+CoreDataProperties.m */; };
+		81EFF6961D981A4600D67AA7 /* CDMVacancy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EFF6941D981A4600D67AA7 /* CDMVacancy.m */; };
 		ACC4B609AC2E5DAB93CB2C79 /* libPods-VacancyApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8572F0EDFADE169CD1387CC /* libPods-VacancyApp.a */; };
 /* End PBXBuildFile section */
 
@@ -87,10 +89,6 @@
 		81C9C3E81D967CB000A95BE5 /* CDMContact+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CDMContact+CoreDataProperties.m"; path = "CoreData Model/CDMContact+CoreDataProperties.m"; sourceTree = "<group>"; };
 		81C9C3E91D967CB000A95BE5 /* CDMContact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDMContact.h; path = "CoreData Model/CDMContact.h"; sourceTree = "<group>"; };
 		81C9C3EA1D967CB000A95BE5 /* CDMContact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDMContact.m; path = "CoreData Model/CDMContact.m"; sourceTree = "<group>"; };
-		81C9C3EB1D967CB000A95BE5 /* CDMVacancy+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CDMVacancy+CoreDataProperties.h"; path = "CoreData Model/CDMVacancy+CoreDataProperties.h"; sourceTree = "<group>"; };
-		81C9C3EC1D967CB000A95BE5 /* CDMVacancy+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CDMVacancy+CoreDataProperties.m"; path = "CoreData Model/CDMVacancy+CoreDataProperties.m"; sourceTree = "<group>"; };
-		81C9C3ED1D967CB000A95BE5 /* CDMVacancy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDMVacancy.h; path = "CoreData Model/CDMVacancy.h"; sourceTree = "<group>"; };
-		81C9C3EE1D967CB000A95BE5 /* CDMVacancy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDMVacancy.m; path = "CoreData Model/CDMVacancy.m"; sourceTree = "<group>"; };
 		81C9C3EF1D967CB000A95BE5 /* CDMExperienceLength+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CDMExperienceLength+CoreDataProperties.h"; path = "CoreData Model/CDMExperienceLength+CoreDataProperties.h"; sourceTree = "<group>"; };
 		81C9C3F01D967CB000A95BE5 /* CDMExperienceLength+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CDMExperienceLength+CoreDataProperties.m"; path = "CoreData Model/CDMExperienceLength+CoreDataProperties.m"; sourceTree = "<group>"; };
 		81C9C3F11D967CB000A95BE5 /* CDMExperienceLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDMExperienceLength.h; path = "CoreData Model/CDMExperienceLength.h"; sourceTree = "<group>"; };
@@ -98,6 +96,14 @@
 		81C9C4021D96B83800A95BE5 /* CoreDataModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CoreDataModel.h; sourceTree = "<group>"; };
 		81C9C4031D96D04E00A95BE5 /* DefaultCoreDataStack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DefaultCoreDataStack.h; sourceTree = "<group>"; };
 		81C9C4041D96D04E00A95BE5 /* DefaultCoreDataStack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DefaultCoreDataStack.m; sourceTree = "<group>"; };
+		81EFF6851D98115C00D67AA7 /* SearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewController.h; sourceTree = "<group>"; };
+		81EFF6861D98115C00D67AA7 /* SearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewController.m; sourceTree = "<group>"; };
+		81EFF6881D98161600D67AA7 /* SearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchTableViewCell.h; sourceTree = "<group>"; };
+		81EFF6891D98161600D67AA7 /* SearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchTableViewCell.m; sourceTree = "<group>"; };
+		81EFF6911D981A4600D67AA7 /* CDMVacancy+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "CDMVacancy+CoreDataProperties.h"; path = "CoreData Model/CDMVacancy+CoreDataProperties.h"; sourceTree = "<group>"; };
+		81EFF6921D981A4600D67AA7 /* CDMVacancy+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "CDMVacancy+CoreDataProperties.m"; path = "CoreData Model/CDMVacancy+CoreDataProperties.m"; sourceTree = "<group>"; };
+		81EFF6931D981A4600D67AA7 /* CDMVacancy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CDMVacancy.h; path = "CoreData Model/CDMVacancy.h"; sourceTree = "<group>"; };
+		81EFF6941D981A4600D67AA7 /* CDMVacancy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CDMVacancy.m; path = "CoreData Model/CDMVacancy.m"; sourceTree = "<group>"; };
 		B8572F0EDFADE169CD1387CC /* libPods-VacancyApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VacancyApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -179,6 +185,8 @@
 		8141EB8D1D93AF640033D774 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				81EFF6881D98161600D67AA7 /* SearchTableViewCell.h */,
+				81EFF6891D98161600D67AA7 /* SearchTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -188,6 +196,8 @@
 			children = (
 				8141EB7B1D93AF2F0033D774 /* ViewController.h */,
 				8141EB7C1D93AF2F0033D774 /* ViewController.m */,
+				81EFF6851D98115C00D67AA7 /* SearchTableViewController.h */,
+				81EFF6861D98115C00D67AA7 /* SearchTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -229,6 +239,10 @@
 		81C9C3FF1D967CBD00A95BE5 /* CoreData Model */ = {
 			isa = PBXGroup;
 			children = (
+				81EFF6911D981A4600D67AA7 /* CDMVacancy+CoreDataProperties.h */,
+				81EFF6921D981A4600D67AA7 /* CDMVacancy+CoreDataProperties.m */,
+				81EFF6931D981A4600D67AA7 /* CDMVacancy.h */,
+				81EFF6941D981A4600D67AA7 /* CDMVacancy.m */,
 				81C9C4021D96B83800A95BE5 /* CoreDataModel.h */,
 				81C9C3DB1D967CB000A95BE5 /* CDMCompany+CoreDataProperties.h */,
 				81C9C3DC1D967CB000A95BE5 /* CDMCompany+CoreDataProperties.m */,
@@ -246,10 +260,6 @@
 				81C9C3E81D967CB000A95BE5 /* CDMContact+CoreDataProperties.m */,
 				81C9C3E91D967CB000A95BE5 /* CDMContact.h */,
 				81C9C3EA1D967CB000A95BE5 /* CDMContact.m */,
-				81C9C3EB1D967CB000A95BE5 /* CDMVacancy+CoreDataProperties.h */,
-				81C9C3EC1D967CB000A95BE5 /* CDMVacancy+CoreDataProperties.m */,
-				81C9C3ED1D967CB000A95BE5 /* CDMVacancy.h */,
-				81C9C3EE1D967CB000A95BE5 /* CDMVacancy.m */,
 				81C9C3EF1D967CB000A95BE5 /* CDMExperienceLength+CoreDataProperties.h */,
 				81C9C3F01D967CB000A95BE5 /* CDMExperienceLength+CoreDataProperties.m */,
 				81C9C3F11D967CB000A95BE5 /* CDMExperienceLength.h */,
@@ -388,11 +398,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81C9C3FC1D967CB000A95BE5 /* CDMVacancy.m in Sources */,
 				81C9C4051D96D04E00A95BE5 /* DefaultCoreDataStack.m in Sources */,
 				8141EB7D1D93AF2F0033D774 /* ViewController.m in Sources */,
 				81C9C3F41D967CB000A95BE5 /* CDMCompany.m in Sources */,
 				8141EBAB1D93E9C80033D774 /* RestConfigSetter.m in Sources */,
+				81EFF68A1D98161600D67AA7 /* SearchTableViewCell.m in Sources */,
 				8141EB951D93B8790033D774 /* Vacancy.m in Sources */,
 				8141EBA71D93C2F80033D774 /* Contact.m in Sources */,
 				8141EB981D93BAF00033D774 /* Currency.m in Sources */,
@@ -406,13 +416,15 @@
 				81C9C3F31D967CB000A95BE5 /* CDMCompany+CoreDataProperties.m in Sources */,
 				81C9C3F51D967CB000A95BE5 /* CDMCurrency+CoreDataProperties.m in Sources */,
 				8141EB921D93B4B40033D774 /* Constants.m in Sources */,
+				81EFF6871D98115C00D67AA7 /* SearchTableViewController.m in Sources */,
 				81C9C3F81D967CB000A95BE5 /* CDMWorkingType.m in Sources */,
+				81EFF6961D981A4600D67AA7 /* CDMVacancy.m in Sources */,
 				8141EBA41D93C14E0033D774 /* Company.m in Sources */,
 				81C9C3F71D967CB000A95BE5 /* CDMWorkingType+CoreDataProperties.m in Sources */,
 				8141EB9E1D93BE4F0033D774 /* ExperienceLength.m in Sources */,
 				81C9C3FD1D967CB000A95BE5 /* CDMExperienceLength+CoreDataProperties.m in Sources */,
 				81C9C3471D9580C100A95BE5 /* RestKitFacade.m in Sources */,
-				81C9C3FB1D967CB000A95BE5 /* CDMVacancy+CoreDataProperties.m in Sources */,
+				81EFF6951D981A4600D67AA7 /* CDMVacancy+CoreDataProperties.m in Sources */,
 				81C9C3411D952E4900A95BE5 /* VacancyAppModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

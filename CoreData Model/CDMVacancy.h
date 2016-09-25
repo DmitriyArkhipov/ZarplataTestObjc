@@ -2,7 +2,7 @@
 //  CDMVacancy.h
 //  VacancyApp
 //
-//  Created by Dmitriy Arkhipov on 24.09.16.
+//  Created by Dmitriy Arkhipov on 25.09.16.
 //  Copyright © 2016 Dmitriy Arkhipov. All rights reserved.
 //
 

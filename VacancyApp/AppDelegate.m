@@ -29,7 +29,7 @@
 //    [restConfigurator searchRequesWithString:@"ios"];
     
     
-    [[RestKitFacade sharedInstance] requestAPIData];
+//    [[RestKitFacade sharedInstance] requestAPIData];
     
     
 //    [[RestKitFacade sharedInstance] searchRequestWithString:@"ios"]; //test search

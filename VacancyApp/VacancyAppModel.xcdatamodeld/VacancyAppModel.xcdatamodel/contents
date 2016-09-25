@@ -24,7 +24,7 @@
         <attribute name="addDate" optional="YES" attributeType="Date" syncable="YES"/>
         <attribute name="header" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="innerID" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
-        <attribute name="salary" optional="YES" attributeType="Integer 32" defaultValueString="0" syncable="YES"/>
+        <attribute name="salary" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="v_ID" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="vacancyDescription" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="company" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDMCompany" inverseName="vacancy" inverseEntity="CDMCompany" syncable="YES"/>
@@ -39,11 +39,11 @@
         <relationship name="vacancy" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CDMVacancy" inverseName="workingType" inverseEntity="CDMVacancy" syncable="YES"/>
     </entity>
     <elements>
-        <element name="CDMVacancy" positionX="-63" positionY="-18" width="128" height="210"/>
-        <element name="CDMCurrency" positionX="-389" positionY="87" width="128" height="105"/>
-        <element name="CDMExperienceLength" positionX="306" positionY="-216" width="128" height="90"/>
-        <element name="CDMWorkingType" positionX="322" positionY="153" width="128" height="90"/>
         <element name="CDMCompany" positionX="90" positionY="213" width="128" height="90"/>
         <element name="CDMContact" positionX="376" positionY="-45" width="128" height="75"/>
+        <element name="CDMCurrency" positionX="-389" positionY="87" width="128" height="105"/>
+        <element name="CDMExperienceLength" positionX="306" positionY="-216" width="128" height="90"/>
+        <element name="CDMVacancy" positionX="-63" positionY="-18" width="128" height="210"/>
+        <element name="CDMWorkingType" positionX="322" positionY="153" width="128" height="90"/>
     </elements>
 </model>
