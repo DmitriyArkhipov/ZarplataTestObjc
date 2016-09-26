@@ -18,12 +18,20 @@
 
 @property (strong, nonatomic) UISearchController *searchController;
 
+@property (strong, nonatomic) UIRefreshControl *mRefreshControl;
+
+@property (assign, nonatomic) BOOL isScrollRequestActive;
+
+@property (strong, nonatomic) NSString *tempSearchItem;
+
 @end
 
 @implementation SearchTableViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    _isScrollRequestActive = YES;
     
     _loadedData = [[NSMutableArray alloc] init];
     _searchResults = [[NSMutableArray alloc] init];
@@ -49,9 +57,6 @@
     
     _searchController.dimsBackgroundDuringPresentation = NO;
     
-    
-    
-    //test
     
 //    // Create the search results controller and store a reference to it.
 //    _searchController = [[UISearchController alloc] initWithSearchResultsController:self];
@@ -209,6 +214,36 @@
     return cell;
 }
 
+// infinity scrolling
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+    CGFloat actualPosition = scrollView.contentOffset.y;
+    CGFloat contentHeight = scrollView.contentSize.height - _tableViewForVacancy.frame.size.height;
+    if (actualPosition >= contentHeight) {
+        
+        NSLog(@"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+        if (!_isScrollRequestActive) {
+            _isScrollRequestActive = YES;
+            
+            if (_searchController.active && ![_searchController.searchBar.text isEqualToString:@""]) {
+                
+                NSLog(@"searchBar.text = %@", _searchController.searchBar.text);
+                
+                [[RestKitFacade sharedInstance] searchRequestWithString:_searchController.searchBar.text];
+                
+            } else {
+            
+                [[RestKitFacade sharedInstance] requestAPIData];
+            }
+            
+//            [self.tableView reloadData];
+            
+        }
+        
+        
+    }
+}
 
 /*
 // Override to support conditional editing of the table view.
@@ -258,7 +293,7 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];;
         CDMVacancy *vacancyItem;
         
-        if (_searchController.active) {
+        if (_searchController.active && ![_searchController.searchBar.text isEqualToString:@""]) {
             
             vacancyItem =_searchResults[indexPath.row];
             
@@ -285,7 +320,9 @@
 
 - (void) didUpdateLoadedDataWithResultArray:(NSArray *)resultArray {
     
-    [_loadedData setArray:resultArray];
+    _isScrollRequestActive = NO;
+    
+    [_loadedData addObjectsFromArray:resultArray];
     
     [self.tableViewForVacancy reloadData];
     
@@ -300,7 +337,9 @@
 
 - (void) didUpdateSearchedDataWithResultArray:(NSArray *)resultArray {
     
-    [_searchResults setArray:resultArray];
+    _isScrollRequestActive = NO;
+    
+    [_searchResults addObjectsFromArray:resultArray];
     
     [self.tableViewForVacancy reloadData];
     
@@ -338,17 +377,35 @@
     NSString *searchString = aSearchController.searchBar.text;
     NSLog(@"searchString=%@", searchString);
     
+    
+    if ([searchString isEqualToString:_tempSearchItem]) {
+        return;
+    }
+    
     // Check if the user cancelled or deleted the search term so we can display the full list instead.
     if (![searchString isEqualToString:@""]) {
         
-        [_searchResults removeAllObjects];
         
-        [[RestKitFacade sharedInstance] searchRequestWithString:searchString];
+            
+            _isScrollRequestActive = YES;
+            
+            _tempSearchItem = searchString;
+            
+            [_searchResults removeAllObjects];
+            
+            [[RestKitFacade sharedInstance] searchRequestWithString:searchString];
+            
+        
         
     }
     
     [self.tableView reloadData];
 }
+
+
+
+
+
 
 
 @end

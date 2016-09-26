@@ -50,7 +50,7 @@
         } else {
             return @"вчера";
         }
-    } else if (components.hour > 0) {
+    } else if (components.hour > 0 && components.hour < 24) {
         
          if (components.hour > 21) {
             return [NSString stringWithFormat:@"%ld часа назад", (long)components.hour];
