@@ -28,18 +28,15 @@
                                                                     options:0];
     
     if (components.year > 0) {
-        
-//        return [NSString stringWithFormat:@"%ld лет назад", (long)components.year];
+    
         return [dataFormatter stringFromDate:date];
         
     } else if (components.month > 0) {
         
-//        return [NSString stringWithFormat:@"%ld месяцев назад", (long)components.month];
         return [dataFormatter stringFromDate:date];
         
     } else if (components.weekOfYear > 0) {
         
-//        return [NSString stringWithFormat:@"%ld недель назад", (long)components.weekOfYear];
         return [dataFormatter stringFromDate:date];
         
     } else if (components.day > 0) {
@@ -55,12 +52,11 @@
         }
     } else if (components.hour > 0) {
         
-        
-        if (components.hour == 21) {
-            return @"%21 час назад";
-        } else if (components.hour > 21) {
+         if (components.hour > 21) {
             return [NSString stringWithFormat:@"%ld часа назад", (long)components.hour];
-        } else if (components.hour > 4) {
+         } else if (components.hour == 21) {
+             return @"%21 час назад";
+         } else if (components.hour > 4) {
             return [NSString stringWithFormat:@"%ld часов назад", (long)components.hour];
         } else if (components.hour > 1)  {
             return [NSString stringWithFormat:@"%ld часа назад", (long)components.hour];
