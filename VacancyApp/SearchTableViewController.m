@@ -195,9 +195,7 @@
     
     [cell.headerLabel setText:vacancyItem.header];
     
-    NSString *date = [NSString stringWithFormat:@"%f",vacancyItem.addDate.timeIntervalSince1970];
-    
-    [cell.timeLabel setText:date];
+    [cell.timeLabel setText:[CustomDateFormatter relativeDateStringForDate:vacancyItem.addDate]];
     
     
     [cell.salaryLabel setText:vacancyItem.salary];
@@ -246,15 +244,41 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"toDetailSegueID"]) {
+        
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];;
+        CDMVacancy *vacancyItem;
+        
+        if (_searchController.active) {
+            
+            vacancyItem =_searchResults[indexPath.row];
+            
+        } else {
+            
+            vacancyItem =_loadedData[indexPath.row];
+        }
+    
+        DetailsViewController *destinationViewController = segue.destinationViewController;
+        
+        destinationViewController.vacancyID = vacancyItem.v_ID;
+    
+    }
+    
+    UIBarButtonItem *backButton = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
+    
+    self.navigationController.navigationBar.topItem.backBarButtonItem = backButton;
+ 
 }
-*/
+
 
 
 #pragma mark - TableViewUpdateDelegate support
@@ -265,13 +289,13 @@
     
     [self.tableViewForVacancy reloadData];
     
-    NSLog(@"didUpdateLoadedDataWithResultArray");
-    
-    for (CDMVacancy *item in resultArray) {
-        
-        NSLog(@"getObjectWithID id = %@", item.v_ID);
-        NSLog(@"getObjectWithID header = %@", item.header);
-    }
+//    NSLog(@"didUpdateLoadedDataWithResultArray");
+//    
+//    for (CDMVacancy *item in resultArray) {
+//        
+//        NSLog(@"getObjectWithID id = %@", item.v_ID);
+//        NSLog(@"getObjectWithID header = %@", item.header);
+//    }
 }
 
 - (void) didUpdateSearchedDataWithResultArray:(NSArray *)resultArray {
@@ -280,28 +304,28 @@
     
     [self.tableViewForVacancy reloadData];
     
-    NSLog(@"=========== didUpdateSearchedDataWithResultArray ==========");
-    
-    for (CDMVacancy *vacancyItem in resultArray) {
-        
-        
-        NSString *v_ID = vacancyItem.v_ID;
-        
-        NSString *header = vacancyItem.header;
-        
-        CDMContact *contact = vacancyItem.contact;
-        
-        NSString *contactAddress = contact.address;
-        
-        NSDate *addDate = vacancyItem.addDate;
-        
-        NSLog(@"ID %@",v_ID);
-        NSLog(@"Headers: %@", header);
-        NSLog(@"Headers address: %@", contactAddress);
-        NSLog(@"data: %@", addDate.description);
-        
-        
-    }
+//    NSLog(@"=========== didUpdateSearchedDataWithResultArray ==========");
+//    
+//    for (CDMVacancy *vacancyItem in resultArray) {
+//        
+//        
+//        NSString *v_ID = vacancyItem.v_ID;
+//        
+//        NSString *header = vacancyItem.header;
+//        
+//        CDMContact *contact = vacancyItem.contact;
+//        
+//        NSString *contactAddress = contact.address;
+//        
+//        NSDate *addDate = vacancyItem.addDate;
+//        
+//        NSLog(@"ID %@",v_ID);
+//        NSLog(@"Headers: %@", header);
+//        NSLog(@"Headers address: %@", contactAddress);
+//        NSLog(@"data: %@", addDate.description);
+//        
+//        
+//    }
 }
 
 
@@ -320,27 +344,9 @@
         [_searchResults removeAllObjects];
         
         [[RestKitFacade sharedInstance] searchRequestWithString:searchString];
-
         
-//        [self.filteredItems removeAllObjects];
-        
-        
-        
-        
-        
-        
-        
-//        for (NSString *str in self.allItems) {
-//            if ([searchString isEqualToString:@""] || [str localizedCaseInsensitiveContainsString:searchString] == YES) {
-//                NSLog(@"str=%@", str);
-//                [self.filteredItems addObject:str];
-//            }
-//        }
-//        self.displayedItems = self.filteredItems;
     }
-    else {
-//        self.displayedItems = self.allItems;
-    }
+    
     [self.tableView reloadData];
 }
 

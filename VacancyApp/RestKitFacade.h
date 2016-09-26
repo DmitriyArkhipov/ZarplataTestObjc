@@ -16,11 +16,14 @@
 #import "DefaultCoreDataStack.h"
 
 #import "TableViewUpdateDelegate.h"
+#import "DetailViewUpdateDelegate.h"
 
 @interface RestKitFacade : NSObject
 
 
 @property (weak, nonatomic) id<TableViewUpdateDelegate> updateTableDelegate;
+
+@property (weak, nonatomic) id<DetailViewUpdateDelegate> updateSelectedDetailDelegate;
 
 
 + (instancetype) sharedInstance;

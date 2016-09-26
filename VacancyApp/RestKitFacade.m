@@ -72,8 +72,7 @@
             
             if ([ID isEqualToString:item.v_ID]) {
                 
-                NSLog(@"getObjectWithID id = %@", item.v_ID);
-                NSLog(@"getObjectWithID header = %@", item.header);
+                [_updateSelectedDetailDelegate didUpdateViewsWithResultSearchObject:item];
                 
                 return item;
             }
@@ -101,27 +100,7 @@
         
         id resultObject = [mappingResult.array firstObject];
         
-        //-------- test block
-        
-        CDMVacancy *vacancy = resultObject;
-            
-        NSString *v_ID = vacancy.v_ID;
-        
-        NSString *header = vacancy.header;
-        
-        CDMContact *contact = vacancy.contact;
-        
-        NSString *contactAddress = contact.address;
-        
-        
-        NSDate *addDate = vacancy.addDate;
-        
-        NSLog(@"ID %@",v_ID);
-        NSLog(@"Headers: %@", header);
-        NSLog(@"Headers address: %@", contactAddress);
-        NSLog(@"data: %@", addDate.description);
-        
-        //----------
+        [_updateSelectedDetailDelegate didUpdateViewsWithResultSearchObject:resultObject];
         
         [_objectManager removeResponseDescriptor:currentDescriptor];
         
@@ -147,41 +126,12 @@
     
     NSDictionary *queryParams = @{
                                   @"offset" : @(25), //Начальный сдвиг возвращаемых результатов
-                                  @"limit" : @(25)
+                                  @"limit" : @(100)
                                   };
     
     [[RKObjectManager sharedManager] getObjectsAtPath:searchPath parameters:queryParams success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         
-//        _requestObjectsTempArray = mappingResult.array;
-        
         [_updateTableDelegate didUpdateSearchedDataWithResultArray:mappingResult.array];
-        
-        
-        //-------- test block
-        
-        
-//        for (CDMVacancy *vacancyItem in _requestObjectsTempArray) {
-//            
-//            
-//            NSString *v_ID = vacancyItem.v_ID;
-//            
-//            NSString *header = vacancyItem.header;
-//            
-//            CDMContact *contact = vacancyItem.contact;
-//            
-//            NSString *contactAddress = contact.address;
-//            
-//            NSDate *addDate = vacancyItem.addDate;
-//            
-//            NSLog(@"ID %@",v_ID);
-//            NSLog(@"Headers: %@", header);
-//            NSLog(@"Headers address: %@", contactAddress);
-//            NSLog(@"data: %@", addDate.description);
-//            
-//            
-//        }
-        
-        //--------
         
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
         NSLog(@"What do you mean by 'there is no zarplata?': %@", error.description);

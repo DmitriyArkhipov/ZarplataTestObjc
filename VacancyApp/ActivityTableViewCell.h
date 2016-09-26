@@ -11,6 +11,7 @@
 @interface ActivityTableViewCell : UITableViewCell
 
 
+
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingActivityIndicator;
 
 @end

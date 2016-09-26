@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		8141EB771D93AF2F0033D774 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EB761D93AF2F0033D774 /* main.m */; };
 		8141EB7A1D93AF2F0033D774 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EB791D93AF2F0033D774 /* AppDelegate.m */; };
-		8141EB7D1D93AF2F0033D774 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EB7C1D93AF2F0033D774 /* ViewController.m */; };
 		8141EB801D93AF2F0033D774 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8141EB7E1D93AF2F0033D774 /* Main.storyboard */; };
 		8141EB821D93AF2F0033D774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8141EB811D93AF2F0033D774 /* Assets.xcassets */; };
 		8141EB851D93AF2F0033D774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8141EB831D93AF2F0033D774 /* LaunchScreen.storyboard */; };
@@ -39,6 +38,8 @@
 		81EFF6951D981A4600D67AA7 /* CDMVacancy+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EFF6921D981A4600D67AA7 /* CDMVacancy+CoreDataProperties.m */; };
 		81EFF6961D981A4600D67AA7 /* CDMVacancy.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EFF6941D981A4600D67AA7 /* CDMVacancy.m */; };
 		81EFF69C1D985C3B00D67AA7 /* ActivityTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EFF69B1D985C3B00D67AA7 /* ActivityTableViewCell.m */; };
+		81EFF69F1D98720C00D67AA7 /* DetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EFF69E1D98720C00D67AA7 /* DetailsViewController.m */; };
+		81EFF6A31D9898DC00D67AA7 /* CustomDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 81EFF6A21D9898DC00D67AA7 /* CustomDateFormatter.m */; };
 		ACC4B609AC2E5DAB93CB2C79 /* libPods-VacancyApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B8572F0EDFADE169CD1387CC /* libPods-VacancyApp.a */; };
 /* End PBXBuildFile section */
 
@@ -49,8 +50,6 @@
 		8141EB761D93AF2F0033D774 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8141EB781D93AF2F0033D774 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		8141EB791D93AF2F0033D774 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		8141EB7B1D93AF2F0033D774 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		8141EB7C1D93AF2F0033D774 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		8141EB7F1D93AF2F0033D774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8141EB811D93AF2F0033D774 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8141EB841D93AF2F0033D774 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -108,6 +107,11 @@
 		81EFF6991D98410F00D67AA7 /* TableViewUpdateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TableViewUpdateDelegate.h; sourceTree = "<group>"; };
 		81EFF69A1D985C3B00D67AA7 /* ActivityTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActivityTableViewCell.h; sourceTree = "<group>"; };
 		81EFF69B1D985C3B00D67AA7 /* ActivityTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActivityTableViewCell.m; sourceTree = "<group>"; };
+		81EFF69D1D98720C00D67AA7 /* DetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailsViewController.h; sourceTree = "<group>"; };
+		81EFF69E1D98720C00D67AA7 /* DetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailsViewController.m; sourceTree = "<group>"; };
+		81EFF6A01D987FE400D67AA7 /* DetailViewUpdateDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewUpdateDelegate.h; sourceTree = "<group>"; };
+		81EFF6A11D9898DC00D67AA7 /* CustomDateFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomDateFormatter.h; sourceTree = "<group>"; };
+		81EFF6A21D9898DC00D67AA7 /* CustomDateFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomDateFormatter.m; sourceTree = "<group>"; };
 		B8572F0EDFADE169CD1387CC /* libPods-VacancyApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VacancyApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -200,10 +204,10 @@
 		8141EB8E1D93AF6B0033D774 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				8141EB7B1D93AF2F0033D774 /* ViewController.h */,
-				8141EB7C1D93AF2F0033D774 /* ViewController.m */,
 				81EFF6851D98115C00D67AA7 /* SearchTableViewController.h */,
 				81EFF6861D98115C00D67AA7 /* SearchTableViewController.m */,
+				81EFF69D1D98720C00D67AA7 /* DetailsViewController.h */,
+				81EFF69E1D98720C00D67AA7 /* DetailsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -220,6 +224,8 @@
 				81C9C3461D9580C100A95BE5 /* RestKitFacade.m */,
 				81C9C4031D96D04E00A95BE5 /* DefaultCoreDataStack.h */,
 				81C9C4041D96D04E00A95BE5 /* DefaultCoreDataStack.m */,
+				81EFF6A11D9898DC00D67AA7 /* CustomDateFormatter.h */,
+				81EFF6A21D9898DC00D67AA7 /* CustomDateFormatter.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -280,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				81EFF6991D98410F00D67AA7 /* TableViewUpdateDelegate.h */,
+				81EFF6A01D987FE400D67AA7 /* DetailViewUpdateDelegate.h */,
 			);
 			name = Delegates;
 			sourceTree = "<group>";
@@ -414,7 +421,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				81C9C4051D96D04E00A95BE5 /* DefaultCoreDataStack.m in Sources */,
-				8141EB7D1D93AF2F0033D774 /* ViewController.m in Sources */,
 				81C9C3F41D967CB000A95BE5 /* CDMCompany.m in Sources */,
 				8141EBAB1D93E9C80033D774 /* RestConfigSetter.m in Sources */,
 				81EFF68A1D98161600D67AA7 /* SearchTableViewCell.m in Sources */,
@@ -427,6 +433,7 @@
 				8141EB771D93AF2F0033D774 /* main.m in Sources */,
 				81C9C3F91D967CB000A95BE5 /* CDMContact+CoreDataProperties.m in Sources */,
 				8141EB9B1D93BD6C0033D774 /* WorkingType.m in Sources */,
+				81EFF6A31D9898DC00D67AA7 /* CustomDateFormatter.m in Sources */,
 				81C9C3FE1D967CB000A95BE5 /* CDMExperienceLength.m in Sources */,
 				81C9C3F31D967CB000A95BE5 /* CDMCompany+CoreDataProperties.m in Sources */,
 				81C9C3F51D967CB000A95BE5 /* CDMCurrency+CoreDataProperties.m in Sources */,
@@ -441,6 +448,7 @@
 				81C9C3FD1D967CB000A95BE5 /* CDMExperienceLength+CoreDataProperties.m in Sources */,
 				81C9C3471D9580C100A95BE5 /* RestKitFacade.m in Sources */,
 				81EFF6951D981A4600D67AA7 /* CDMVacancy+CoreDataProperties.m in Sources */,
+				81EFF69F1D98720C00D67AA7 /* DetailsViewController.m in Sources */,
 				81C9C3411D952E4900A95BE5 /* VacancyAppModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

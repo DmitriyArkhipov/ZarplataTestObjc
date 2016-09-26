@@ -13,6 +13,7 @@
 #import "TableViewUpdateDelegate.h"
 #import "SearchTableViewCell.h"
 #import "ActivityTableViewCell.h"
+#import "DetailsViewController.h"
 
 @interface SearchTableViewController : UITableViewController <TableViewUpdateDelegate, UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating>
 
