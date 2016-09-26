@@ -8,10 +8,6 @@
 
 #import "AppDelegate.h"
 
-#import "RestConfigSetter.h"
-
-#import "RestKitFacade.h"
-
 @interface AppDelegate ()
 
 @end

@@ -13,13 +13,6 @@
 		8141EB821D93AF2F0033D774 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8141EB811D93AF2F0033D774 /* Assets.xcassets */; };
 		8141EB851D93AF2F0033D774 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8141EB831D93AF2F0033D774 /* LaunchScreen.storyboard */; };
 		8141EB921D93B4B40033D774 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EB911D93B4B40033D774 /* Constants.m */; };
-		8141EB951D93B8790033D774 /* Vacancy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EB941D93B8790033D774 /* Vacancy.m */; };
-		8141EB981D93BAF00033D774 /* Currency.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EB971D93BAF00033D774 /* Currency.m */; };
-		8141EB9B1D93BD6C0033D774 /* WorkingType.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EB9A1D93BD6C0033D774 /* WorkingType.m */; };
-		8141EB9E1D93BE4F0033D774 /* ExperienceLength.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EB9D1D93BE4F0033D774 /* ExperienceLength.m */; };
-		8141EBA41D93C14E0033D774 /* Company.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EBA31D93C14E0033D774 /* Company.m */; };
-		8141EBA71D93C2F80033D774 /* Contact.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EBA61D93C2F80033D774 /* Contact.m */; };
-		8141EBAB1D93E9C80033D774 /* RestConfigSetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8141EBAA1D93E9C80033D774 /* RestConfigSetter.m */; };
 		81C9C3411D952E4900A95BE5 /* VacancyAppModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C33F1D952E4900A95BE5 /* VacancyAppModel.xcdatamodeld */; };
 		81C9C3471D9580C100A95BE5 /* RestKitFacade.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3461D9580C100A95BE5 /* RestKitFacade.m */; };
 		81C9C3F31D967CB000A95BE5 /* CDMCompany+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 81C9C3DC1D967CB000A95BE5 /* CDMCompany+CoreDataProperties.m */; };
@@ -56,20 +49,6 @@
 		8141EB861D93AF2F0033D774 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8141EB901D93B4B40033D774 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		8141EB911D93B4B40033D774 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
-		8141EB931D93B8790033D774 /* Vacancy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Vacancy.h; sourceTree = "<group>"; };
-		8141EB941D93B8790033D774 /* Vacancy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Vacancy.m; sourceTree = "<group>"; };
-		8141EB961D93BAF00033D774 /* Currency.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Currency.h; sourceTree = "<group>"; };
-		8141EB971D93BAF00033D774 /* Currency.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Currency.m; sourceTree = "<group>"; };
-		8141EB991D93BD6C0033D774 /* WorkingType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WorkingType.h; sourceTree = "<group>"; };
-		8141EB9A1D93BD6C0033D774 /* WorkingType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WorkingType.m; sourceTree = "<group>"; };
-		8141EB9C1D93BE4F0033D774 /* ExperienceLength.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExperienceLength.h; sourceTree = "<group>"; };
-		8141EB9D1D93BE4F0033D774 /* ExperienceLength.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExperienceLength.m; sourceTree = "<group>"; };
-		8141EBA21D93C14E0033D774 /* Company.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Company.h; sourceTree = "<group>"; };
-		8141EBA31D93C14E0033D774 /* Company.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Company.m; sourceTree = "<group>"; };
-		8141EBA51D93C2F80033D774 /* Contact.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Contact.h; sourceTree = "<group>"; };
-		8141EBA61D93C2F80033D774 /* Contact.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Contact.m; sourceTree = "<group>"; };
-		8141EBA91D93E9C80033D774 /* RestConfigSetter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestConfigSetter.h; sourceTree = "<group>"; };
-		8141EBAA1D93E9C80033D774 /* RestConfigSetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestConfigSetter.m; sourceTree = "<group>"; };
 		81C9C3401D952E4900A95BE5 /* VacancyAppModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = VacancyAppModel.xcdatamodel; sourceTree = "<group>"; };
 		81C9C3451D9580C100A95BE5 /* RestKitFacade.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestKitFacade.h; sourceTree = "<group>"; };
 		81C9C3461D9580C100A95BE5 /* RestKitFacade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestKitFacade.m; sourceTree = "<group>"; };
@@ -185,7 +164,6 @@
 			isa = PBXGroup;
 			children = (
 				81C9C3FF1D967CBD00A95BE5 /* CoreData Model */,
-				8141EBA81D93C6A60033D774 /* Base API Model */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -218,8 +196,6 @@
 				81EFF6971D98400D00D67AA7 /* Delegates */,
 				8141EB901D93B4B40033D774 /* Constants.h */,
 				8141EB911D93B4B40033D774 /* Constants.m */,
-				8141EBA91D93E9C80033D774 /* RestConfigSetter.h */,
-				8141EBAA1D93E9C80033D774 /* RestConfigSetter.m */,
 				81C9C3451D9580C100A95BE5 /* RestKitFacade.h */,
 				81C9C3461D9580C100A95BE5 /* RestKitFacade.m */,
 				81C9C4031D96D04E00A95BE5 /* DefaultCoreDataStack.h */,
@@ -228,25 +204,6 @@
 				81EFF6A21D9898DC00D67AA7 /* CustomDateFormatter.m */,
 			);
 			name = API;
-			sourceTree = "<group>";
-		};
-		8141EBA81D93C6A60033D774 /* Base API Model */ = {
-			isa = PBXGroup;
-			children = (
-				8141EB931D93B8790033D774 /* Vacancy.h */,
-				8141EB941D93B8790033D774 /* Vacancy.m */,
-				8141EB961D93BAF00033D774 /* Currency.h */,
-				8141EB971D93BAF00033D774 /* Currency.m */,
-				8141EB991D93BD6C0033D774 /* WorkingType.h */,
-				8141EB9A1D93BD6C0033D774 /* WorkingType.m */,
-				8141EB9C1D93BE4F0033D774 /* ExperienceLength.h */,
-				8141EB9D1D93BE4F0033D774 /* ExperienceLength.m */,
-				8141EBA21D93C14E0033D774 /* Company.h */,
-				8141EBA31D93C14E0033D774 /* Company.m */,
-				8141EBA51D93C2F80033D774 /* Contact.h */,
-				8141EBA61D93C2F80033D774 /* Contact.m */,
-			);
-			name = "Base API Model";
 			sourceTree = "<group>";
 		};
 		81C9C3FF1D967CBD00A95BE5 /* CoreData Model */ = {
@@ -422,17 +379,12 @@
 			files = (
 				81C9C4051D96D04E00A95BE5 /* DefaultCoreDataStack.m in Sources */,
 				81C9C3F41D967CB000A95BE5 /* CDMCompany.m in Sources */,
-				8141EBAB1D93E9C80033D774 /* RestConfigSetter.m in Sources */,
 				81EFF68A1D98161600D67AA7 /* SearchTableViewCell.m in Sources */,
-				8141EB951D93B8790033D774 /* Vacancy.m in Sources */,
-				8141EBA71D93C2F80033D774 /* Contact.m in Sources */,
-				8141EB981D93BAF00033D774 /* Currency.m in Sources */,
 				81C9C3F61D967CB000A95BE5 /* CDMCurrency.m in Sources */,
 				81C9C3FA1D967CB000A95BE5 /* CDMContact.m in Sources */,
 				8141EB7A1D93AF2F0033D774 /* AppDelegate.m in Sources */,
 				8141EB771D93AF2F0033D774 /* main.m in Sources */,
 				81C9C3F91D967CB000A95BE5 /* CDMContact+CoreDataProperties.m in Sources */,
-				8141EB9B1D93BD6C0033D774 /* WorkingType.m in Sources */,
 				81EFF6A31D9898DC00D67AA7 /* CustomDateFormatter.m in Sources */,
 				81C9C3FE1D967CB000A95BE5 /* CDMExperienceLength.m in Sources */,
 				81C9C3F31D967CB000A95BE5 /* CDMCompany+CoreDataProperties.m in Sources */,
@@ -441,10 +393,8 @@
 				81EFF6871D98115C00D67AA7 /* SearchTableViewController.m in Sources */,
 				81C9C3F81D967CB000A95BE5 /* CDMWorkingType.m in Sources */,
 				81EFF6961D981A4600D67AA7 /* CDMVacancy.m in Sources */,
-				8141EBA41D93C14E0033D774 /* Company.m in Sources */,
 				81EFF69C1D985C3B00D67AA7 /* ActivityTableViewCell.m in Sources */,
 				81C9C3F71D967CB000A95BE5 /* CDMWorkingType+CoreDataProperties.m in Sources */,
-				8141EB9E1D93BE4F0033D774 /* ExperienceLength.m in Sources */,
 				81C9C3FD1D967CB000A95BE5 /* CDMExperienceLength+CoreDataProperties.m in Sources */,
 				81C9C3471D9580C100A95BE5 /* RestKitFacade.m in Sources */,
 				81EFF6951D981A4600D67AA7 /* CDMVacancy+CoreDataProperties.m in Sources */,

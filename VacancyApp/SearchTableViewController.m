@@ -57,63 +57,6 @@
     
     _searchController.dimsBackgroundDuringPresentation = NO;
     
-    
-//    // Create the search results controller and store a reference to it.
-//    _searchController = [[UISearchController alloc] initWithSearchResultsController:self];
-//    
-//    // Install the search bar as the table header.
-//    self.tableView.tableHeaderView = _searchController.searchBar;
-//    
-//    // It is usually good to set the presentation context.
-//    self.definesPresentationContext = YES;
-
-    
-//    self.tableViewForVacancy.rowHeight = UITableViewAutomaticDimension;
-//    self.tableViewForVacancy.estimatedRowHeight = 300.0;
-    
-//    NSManagedObjectContext *managedObjectContext = [[DefaultCoreDataStack sharedInstance] managedObjectContext];
-//    
-//    NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] initWithEntityName:@"CDMVacancy"];
-//    
-//    @try {
-//        
-//        _testTableArray = [managedObjectContext executeFetchRequest:fetchRequest error:nil];
-//        
-//        NSLog(@"====================== table view controller log ===============");
-//        
-//        for (CDMVacancy *vacancyItem in _testTableArray) {
-//        
-//            NSString *v_ID = vacancyItem.v_ID;
-//            
-//            NSString *header = vacancyItem.header;
-//            
-//            CDMContact *contact = vacancyItem.contact;
-//            
-//            NSString *contactAddress = contact.address;
-//            
-//            NSDate *addDate = vacancyItem.addDate;
-//            
-//            NSLog(@"ID %@",v_ID);
-//            NSLog(@"Headers: %@", header);
-//            NSLog(@"Headers address: %@", contactAddress);
-//            NSLog(@"data: %@", addDate.description);
-//        
-//        
-//        }
-//
-//        
-//    } @catch (NSException *exception) {
-//        
-//        NSLog(@"CoreData exception: %@", exception.description);
-//        
-//    }
-
-    
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -222,13 +165,10 @@
     CGFloat contentHeight = scrollView.contentSize.height - _tableViewForVacancy.frame.size.height;
     if (actualPosition >= contentHeight) {
         
-        NSLog(@"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++");
         if (!_isScrollRequestActive) {
             _isScrollRequestActive = YES;
             
             if (_searchController.active && ![_searchController.searchBar.text isEqualToString:@""]) {
-                
-                NSLog(@"searchBar.text = %@", _searchController.searchBar.text);
                 
                 [[RestKitFacade sharedInstance] searchRequestWithString:_searchController.searchBar.text];
                 
@@ -237,10 +177,7 @@
                 [[RestKitFacade sharedInstance] requestAPIData];
             }
             
-//            [self.tableView reloadData];
-            
         }
-        
         
     }
 }
@@ -326,13 +263,6 @@
     
     [self.tableViewForVacancy reloadData];
     
-//    NSLog(@"didUpdateLoadedDataWithResultArray");
-//    
-//    for (CDMVacancy *item in resultArray) {
-//        
-//        NSLog(@"getObjectWithID id = %@", item.v_ID);
-//        NSLog(@"getObjectWithID header = %@", item.header);
-//    }
 }
 
 - (void) didUpdateSearchedDataWithResultArray:(NSArray *)resultArray {
@@ -342,29 +272,6 @@
     [_searchResults addObjectsFromArray:resultArray];
     
     [self.tableViewForVacancy reloadData];
-    
-//    NSLog(@"=========== didUpdateSearchedDataWithResultArray ==========");
-//    
-//    for (CDMVacancy *vacancyItem in resultArray) {
-//        
-//        
-//        NSString *v_ID = vacancyItem.v_ID;
-//        
-//        NSString *header = vacancyItem.header;
-//        
-//        CDMContact *contact = vacancyItem.contact;
-//        
-//        NSString *contactAddress = contact.address;
-//        
-//        NSDate *addDate = vacancyItem.addDate;
-//        
-//        NSLog(@"ID %@",v_ID);
-//        NSLog(@"Headers: %@", header);
-//        NSLog(@"Headers address: %@", contactAddress);
-//        NSLog(@"data: %@", addDate.description);
-//        
-//        
-//    }
 }
 
 
@@ -372,11 +279,8 @@
 
 // When the user types in the search bar, this method gets called.
 - (void)updateSearchResultsForSearchController:(UISearchController *)aSearchController {
-    NSLog(@"updateSearchResultsForSearchController");
     
     NSString *searchString = aSearchController.searchBar.text;
-    NSLog(@"searchString=%@", searchString);
-    
     
     if ([searchString isEqualToString:_tempSearchItem]) {
         return;

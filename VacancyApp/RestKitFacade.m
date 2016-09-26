@@ -105,7 +105,7 @@
         [_objectManager removeResponseDescriptor:currentDescriptor];
         
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        NSLog(@"What do you mean by 'there is no zarplata?': %@", error.description);
+        NSLog(@"searchRequestWithVacancyID error: %@", error.description);
     }];
 }
 
@@ -134,7 +134,7 @@
         [_updateTableDelegate didUpdateSearchedDataWithResultArray:mappingResult.array];
         
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        NSLog(@"What do you mean by 'there is no zarplata?': %@", error.description);
+        NSLog(@"searchRequestWithString error: %@", error.description);
     }];
     
 }
@@ -157,7 +157,7 @@
         [_updateTableDelegate didUpdateLoadedDataWithResultArray:mappingResult.array];
         
     } failure:^(RKObjectRequestOperation *operation, NSError *error) {
-        NSLog(@"What do you mean by 'there is no zarplata?': %@", error.description);
+        NSLog(@"requestAPIData error: %@", error.description);
     }];
 
 }
