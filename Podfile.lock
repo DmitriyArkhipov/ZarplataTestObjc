@@ -28,6 +28,15 @@ PODS:
 DEPENDENCIES:
   - RestKit (~> 0.24.0)
 
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - ISO8601DateFormatterValueTransformer
+    - RestKit
+    - RKValueTransformers
+    - SOCKit
+    - TransitionKit
+
 SPEC CHECKSUMS:
   AFNetworking: cf8e418e16f0c9c7e5c3150d019a3c679d015018
   ISO8601DateFormatterValueTransformer: 52da467d6ec899d6aedda8e48280ac92e8ee97e6
@@ -36,6 +45,6 @@ SPEC CHECKSUMS:
   SOCKit: c7376ac262bea9115b8f749358f762522a47d392
   TransitionKit: 3a14b6acc7cf2d1dd3e454e24dbad1cfab9a1ef1
 
-PODFILE CHECKSUM: fd551b9bf33fc77dd6c822c38af7f3752e342c6a
+PODFILE CHECKSUM: c1af6201d74a246721cbe3f8774ab1f9b691dacf
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.9.3

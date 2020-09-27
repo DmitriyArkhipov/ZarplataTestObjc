@@ -94,7 +94,7 @@
     
     NSString *searchPath = [NSString stringWithFormat:@"%@%@", API_PATH_PATTERN, ID];
     
-    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+//    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
     
     [[RKObjectManager sharedManager] getObjectsAtPath:searchPath parameters:nil success:^(RKObjectRequestOperation *operation, RKMappingResult *mappingResult) {
         
@@ -122,7 +122,7 @@
     
     
 
-    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+//    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
     
     NSDictionary *queryParams = @{
                                   @"offset" : @(25), //Начальный сдвиг возвращаемых результатов
@@ -143,7 +143,7 @@
 
 - (void) requestAPIData {
 
-    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
+//    RKLogConfigureByName("RestKit/Network", RKLogLevelTrace);
     
     NSDictionary *queryParams = @{
                                   @"offset" : @(25), //Начальный сдвиг возвращаемых результатов (test value)
