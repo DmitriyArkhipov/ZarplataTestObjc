@@ -1,0 +1,31 @@
+# macOS
+# 
+.DS_Store
+
+# Xcode
+# 
+Pods/
+*.xcuserstate
+*.ipa
+*.zip
+
+# Ignore Debug
+# 
+VacancyApp.xcworkspace/xcuserdata/
+
+# Fastlane
+#
+# fastlane specific
+fastlane/report.xml
+
+# deliver temporary files
+fastlane/Preview.html
+
+# snapshot generated screenshots
+fastlane/screenshots
+
+# scan temporary files
+fastlane/test_output
+
+# fastlane generated README.md
+fastlane/README.md
